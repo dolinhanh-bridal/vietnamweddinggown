@@ -7,7 +7,9 @@
    - Đóng (hoặc điện thoại cuộn tiếp ~1 màn hình) → nhãn nhỏ trên nút WhatsApp nổi đếm giờ còn lại, bấm mở lại.
    - Nút "Book now" → khung đặt váy (chị chốt 17/10: khách điền thông tin → chuyển khoản thẳng STK, KHÔNG PayPal → nút cuối nhắn WhatsApp):
        B1 khách điền mã váy (sẵn mã trong giỏ) · tên · WhatsApp · email · ngày cưới · quốc gia → mail báo chị (MAIL_URL, như form đặt lịch)
-       B2 tính tiền (giá − 100, cọc 30%) + STK ACB anh Cường (giống trang made-to-measure #pay) → "Send on WhatsApp" tin tiếng Anh có mã "US$100 OFF – 24H".
+       B2 tính tiền (giá − 100, cọc 30%) + STK ACB anh Cường (giống trang made-to-measure #pay) → khách CHUYỂN KHOẢN XONG bấm
+          "I've paid · Send receipt on WhatsApp" = tin tiếng Anh "I have transferred my 30% deposit…" có mã "US$100 OFF – 24H" + "Here is my transfer receipt:" → khách đính kèm ẢNH BILL trong WhatsApp rồi gửi (wa.me không tự gắn ảnh được).
+          Váy chưa có giá → nút "Send on WhatsApp" hỏi giá trước.
    - Còn hạn thì MỌI link WhatsApp khác (nút nổi, giỏ hàng "Order on WhatsApp", form) cũng tự kèm dòng mã + hạn → nhân viên nhận ra.
    - dung-web-vwg.py chèn file này vào các trang web riêng (trừ made-to-measure). Web chính dolinhanhbridal.com KHÔNG nạp.
    - Xem lại từ đầu: thêm ?uudai=0 vào link. */
@@ -44,9 +46,12 @@
          uuDai:"24-hour offer", tong:"Total", coc:"Deposit 30%", hoiGia:"price on request", cocHoi:"confirmed on WhatsApp",
          ck:"Transfer to our bank in Vietnam", tkTen:"Account name", tkSo:"Account number", tkNh:"Bank", tkSwift:"SWIFT code", tkNd:"Reference",
          chep:"Copy", daChep:"Copied", cach:"Wise · SWIFT transfer · Remitly",
-         c1:"Transfer within 24 hours", c1p:"to keep US$100 off",
-         c2:"Send the receipt on WhatsApp", c2p:"we confirm and hold your gown",
-         gui:"Send on WhatsApp", sua:"← Edit details" },
+         c1:"Transfer the 30% deposit", c1p:"within 24 hours to keep US$100 off",
+         c2:"Send the receipt on WhatsApp", c2p:"a photo or screenshot of the transfer",
+         h1:"Send your booking on WhatsApp", h1p:"we confirm the price and deposit",
+         h2:"Then transfer the 30% deposit", h2p:"within 24 hours to keep US$100 off",
+         gui:"Send on WhatsApp", guiDa:"I've paid · Send receipt on WhatsApp",
+         nhacBill:"WhatsApp opens with your booking — attach the receipt photo, then send.", sua:"← Edit details" },
     vi:{ nhan:"Ưu đãi 24 giờ", tit:"Giảm <em>US$100</em> cho váy cưới",
          y1:"Đặt váy trong 24 giờ", y1p:"cọc 30% qua chuyển khoản",
          y2:"Váy có sẵn", y2p:"không áp dụng may đo",
@@ -60,9 +65,12 @@
          uuDai:"Ưu đãi 24 giờ", tong:"Tổng", coc:"Cọc 30%", hoiGia:"giá liên hệ", cocHoi:"báo qua WhatsApp",
          ck:"Chuyển khoản vào tài khoản ở Việt Nam", tkTen:"Chủ tài khoản", tkSo:"Số tài khoản", tkNh:"Ngân hàng", tkSwift:"Mã SWIFT", tkNd:"Nội dung",
          chep:"Chép", daChep:"Đã chép", cach:"Wise · chuyển khoản SWIFT · Remitly",
-         c1:"Chuyển khoản trong 24 giờ", c1p:"để giữ ưu đãi US$100",
-         c2:"Gửi biên lai qua WhatsApp", c2p:"Dolinhanh xác nhận và giữ váy",
-         gui:"Gửi qua WhatsApp", sua:"← Sửa thông tin" },
+         c1:"Chuyển khoản cọc 30%", c1p:"trong 24 giờ để giữ ưu đãi US$100",
+         c2:"Gửi bill qua WhatsApp", c2p:"ảnh chụp biên lai chuyển khoản",
+         h1:"Gửi thông tin qua WhatsApp", h1p:"Dolinhanh báo giá và số tiền cọc",
+         h2:"Rồi chuyển khoản cọc 30%", h2p:"trong 24 giờ để giữ ưu đãi US$100",
+         gui:"Gửi qua WhatsApp", guiDa:"Đã chuyển khoản · Gửi bill qua WhatsApp",
+         nhacBill:"WhatsApp mở sẵn tin đặt váy — đính kèm ảnh bill rồi gửi.", sua:"← Sửa thông tin" },
     zh:{ nhan:"24 小时限时优惠", tit:"婚纱立减 <em>US$100</em>",
          y1:"24 小时内预订", y1p:"银行转账支付 30% 定金",
          y2:"现货婚纱", y2p:"定制婚纱不适用",
@@ -76,9 +84,12 @@
          uuDai:"24 小时优惠", tong:"合计", coc:"定金 30%", hoiGia:"价格请咨询", cocHoi:"WhatsApp 确认",
          ck:"转账至我们的越南银行账户", tkTen:"账户名", tkSo:"账号", tkNh:"银行", tkSwift:"SWIFT 代码", tkNd:"转账备注",
          chep:"复制", daChep:"已复制", cach:"Wise · SWIFT 转账 · Remitly",
-         c1:"24 小时内转账", c1p:"保留 US$100 优惠",
-         c2:"通过 WhatsApp 发送转账凭证", c2p:"我们确认后为您保留婚纱",
-         gui:"通过 WhatsApp 发送", sua:"← 修改信息" }
+         c1:"转账支付 30% 定金", c1p:"24 小时内完成，保留 US$100 优惠",
+         c2:"通过 WhatsApp 发送转账凭证", c2p:"转账截图或照片",
+         h1:"通过 WhatsApp 发送预订信息", h1p:"我们确认价格和定金",
+         h2:"然后转账支付 30% 定金", h2p:"24 小时内完成，保留 US$100 优惠",
+         gui:"通过 WhatsApp 发送", guiDa:"已转账 · WhatsApp 发送凭证",
+         nhacBill:"WhatsApp 将打开预订信息 — 附上转账凭证照片后发送。", sua:"← 修改信息" }
   };
   function ngu(){ var l = (document.documentElement.lang || "en").toLowerCase(); return l.indexOf("zh") === 0 ? "zh" : l.indexOf("vi") === 0 ? "vi" : "en"; }
   function c(){ return CHU[ngu()]; }
@@ -218,7 +229,7 @@
         '<div class="uu-bang"></div>' +
         '<p class="uu-ck"></p><dl class="uu-tk">' + dongTk + '</dl><p class="uu-cach"></p>' +
         '<ul class="uu-ds"><li><b class="uu-c1"></b><i class="uu-c1p"></i></li><li><b class="uu-c2"></b><i class="uu-c2p"></i></li></ul>' +
-        '<a class="uu-nut uu-gui" target="_blank" rel="noopener">' + ICON_WA + '<span></span></a>' +
+        '<a class="uu-nut uu-gui" target="_blank" rel="noopener">' + ICON_WA + '<span></span></a><p class="uu-phu uu-nhac-bill"></p>' +
         '<button type="button" class="uu-sua"></button>' +
       '</div>' +
     '</div>';
@@ -316,20 +327,26 @@
                   '<div class="coc"><span>' + k.coc + '</span><span>' + tien(t.coc) + '</span></div>';
     else h += '<div class="tong coc"><span>' + k.coc + '</span><span>' + k.cocHoi + '</span></div>';
     d(".uu-bang").innerHTML = h;
+    /* có giá → khách chuyển khoản trước rồi báo WhatsApp (chị 17/10: "khách ck xong thì báo luôn ws"); chưa có giá → nhắn WhatsApp hỏi giá trước */
+    ghi(d(".uu-c1"), t.du ? k.c1 : k.h1); ghi(d(".uu-c1p"), t.du ? k.c1p : k.h1p);
+    ghi(d(".uu-c2"), t.du ? k.c2 : k.h2); ghi(d(".uu-c2p"), t.du ? k.c2p : k.h2p);
+    ghi(d(".uu-gui span"), t.du ? k.guiDa : k.gui);
+    ghi(d(".uu-nhac-bill"), k.nhacBill); d(".uu-nhac-bill").hidden = !t.du;  /* chị 17/10: "gửi bill đó vào ws" */
     d(".uu-nd").textContent = (tt.ten || "Name") + " Deposit";
     d(".uu-gui").href = linkGui();
   }
   function tinGui(){
     var t = tinh(), tt = thongTin(), L = [];
-    L.push("Hi Dolinhanh Bridal, I'd like to book with the offer " + MA + " (valid until " + hanVN() + ").");
+    if(t.du) L.push("Hi Dolinhanh Bridal, I have transferred my 30% deposit with the offer " + MA + " (valid until " + hanVN() + ").");
+    else L.push("Hi Dolinhanh Bridal, I'd like to book with the offer " + MA + " (valid until " + hanVN() + ").");
     L.push("Gown: " + t.ds.map(function(x){ return x.ms + (x.gia ? " (" + tien(x.gia) + ")" : ""); }).join(", "));
-    if(t.du){ L.push("Total after US$100 off: " + tien(t.sau)); L.push("Deposit 30%: " + tien(t.coc)); }
+    if(t.du){ L.push("Total after US$100 off: " + tien(t.sau)); L.push("Deposit paid (30%): " + tien(t.coc)); }
     else L.push("Please confirm the price and my 30% deposit.");
     L.push("Name: " + tt.ten); L.push("WhatsApp: " + tt.wa);
     if(tt.em) L.push("Email: " + tt.em);
     if(tt.ngay) L.push("Wedding date: " + ngayDep(tt.ngay));
     if(tt.nuoc) L.push("Country: " + tt.nuoc);
-    L.push("I will send the transfer receipt here.");
+    L.push(t.du ? "Here is my transfer receipt:" : "I will transfer the deposit once you confirm.");
     return L.join("\n");
   }
   function linkGui(){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(tinGui()); }
