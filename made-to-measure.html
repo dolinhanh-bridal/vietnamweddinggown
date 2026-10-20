@@ -4,7 +4,7 @@
 <!--
   QUY TRÌNH MAY ĐO ONLINE cho khách nước ngoài (chị Linh duyệt 15/10/2026) — link gửi khách: vietnamweddinggown.com/made-to-measure.html
   Mặc định tiếng Anh; nút VI đổi sang tiếng Việt (chữ VI nằm trong data-vi).
-  Luật chị chốt 15/10/2026: làm hết online, KHÔNG video call — chỉ gửi ẢNH + CLIP · thanh toán TRƯỚC rồi mới làm: 30% (bản vẽ + chọn vải) · 50% (dựng corset) · 20% (trước khi gửi)
+  Luật chị chốt 15/10/2026: làm hết online, gửi ẢNH + CLIP (20/10/2026 chị BẬT LẠI gọi video WhatsApp: bước 2, 5, 6 + nút "Video call on WhatsApp") · thanh toán TRƯỚC rồi mới làm: 30% (bản vẽ + chọn vải) · 50% (dựng corset) · 20% (trước khi gửi)
   · nhận tiền vào tài khoản ngân hàng VN qua Wise / SWIFT / Remitly · hủy đơn không hoàn tiền · hàng thủ công có sai số · form 80–90%, đính kết 50–60%
   · váy về tới nơi cần sửa thì khách tự trả · KHÔNG ghi giá may đo (báo sau khi xem mẫu).
 -->
@@ -76,6 +76,9 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     padding:15px 26px;font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;transition:background .4s,gap .4s}
   .btn::after{content:"\2192";letter-spacing:0}
   .btn:hover{background:var(--wine-dk);gap:14px}
+  .btn.vien{background:transparent;color:var(--wine);border:1px solid var(--wine);font-weight:500}
+  .btn.vien::after{content:none}
+  .btn.vien:hover{background:var(--wine);color:#fff}
   .nut-hang{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;justify-content:center}
 
   /* header */
@@ -202,6 +205,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         </ul>
         <div class="nut-hang">
           <a class="btn" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20to%20order%20a%20made-to-measure%20wedding%20dress." target="_blank" rel="noopener" data-vi="Gửi ảnh mẫu qua WhatsApp">Send your photos on WhatsApp</a>
+          <a class="btn vien" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20a%20video%20call%20about%20a%20made-to-measure%20wedding%20dress." target="_blank" rel="noopener" data-vi="Gọi video qua WhatsApp">Video call on WhatsApp</a>
         </div>
       </div>
       <img src="anh/nc-30.jpg" alt="Close-up of hand-sewn lace appliqué on a Dolinhanh gown" fetchpriority="high">
@@ -222,7 +226,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         </div></li>
         <li><span class="so">2</span><div>
           <h3 data-vi="Xem chất liệu &amp; nhận báo giá">See the fabrics &amp; get your quote</h3>
-          <p data-vi="Dolinhanh gửi ảnh, clip cận cảnh chất liệu, báo giá, thời gian may và phí vận chuyển dự kiến">We send photos and close-up clips of the fabrics, your quote, the production time and the estimated shipping fee</p>
+          <p data-vi="Dolinhanh gửi ảnh, clip cận cảnh chất liệu (hoặc gọi video WhatsApp cho bạn xem), báo giá, thời gian may và phí vận chuyển dự kiến">We send photos and close-up clips of the fabrics (or show them on a WhatsApp video call), your quote, the production time and the estimated shipping fee</p>
         </div></li>
         <li class="tra"><span class="so">3</span><div>
           <h3 data-vi="Thanh toán đợt 1: 30%">Payment 1: 30%</h3>
@@ -234,12 +238,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         </div></li>
         <li class="tra"><span class="so">5</span><div>
           <h3 data-vi="Thanh toán đợt 2: 50%">Payment 2: 50%</h3>
-          <p data-vi="Dolinhanh dựng corset, gửi ảnh và clip để bạn duyệt form theo các tiêu chí đã thống nhất">We build the corset and send photos and clips so you can approve the shape against the points we agreed</p>
-          <p class="phu" data-vi="Đây là bước duyệt form qua ảnh và clip, không phải thử váy trực tiếp">This is an approval from photos and clips, not an in-person fitting</p>
+          <p data-vi="Dolinhanh dựng corset, gửi ảnh, clip hoặc gọi video để bạn duyệt form theo các tiêu chí đã thống nhất">We build the corset and send photos and clips, or show it on a video call, so you can approve the shape against the points we agreed</p>
+          <p class="phu" data-vi="Đây là bước duyệt form qua ảnh, clip hoặc gọi video, không phải thử váy trực tiếp">This is an approval from photos, clips or a video call, not an in-person fitting</p>
         </div></li>
         <li class="tra"><span class="so">6</span><div>
           <h3 data-vi="Thanh toán 20% còn lại">Final payment: 20%</h3>
-          <p data-vi="Bạn xem ảnh và clip váy hoàn thiện, xác nhận trước khi Dolinhanh gửi hàng">You see photos and clips of the finished gown and confirm before we ship</p>
+          <p data-vi="Bạn xem váy hoàn thiện qua ảnh, clip hoặc gọi video, xác nhận trước khi Dolinhanh gửi hàng">You see the finished gown in photos, clips or on a video call and confirm before we ship</p>
         </div></li>
         <li><span class="so">7</span><div>
           <h3 data-vi="Nhận váy tại nhà">Receive it at home</h3>
@@ -270,6 +274,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       </ul>
       <div class="mid nut-hang">
         <a class="btn" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20to%20order%20a%20made-to-measure%20wedding%20dress." target="_blank" rel="noopener" data-vi="Gửi ảnh mẫu qua WhatsApp">Send your photos on WhatsApp</a>
+          <a class="btn vien" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20a%20video%20call%20about%20a%20made-to-measure%20wedding%20dress." target="_blank" rel="noopener" data-vi="Gọi video qua WhatsApp">Video call on WhatsApp</a>
       </div>
       <p class="chu-thich" data-vi="WhatsApp +84 359 950 588 · Instagram @dolinhanh.bridal">WhatsApp +84 359 950 588 · Instagram @dolinhanh.bridal</p>
     </div>
