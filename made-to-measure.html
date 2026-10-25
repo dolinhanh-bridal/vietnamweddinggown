@@ -119,6 +119,18 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .chu-thich{margin-top:22px;text-align:center;font-size:13px;color:var(--taupe-deep)}
   .chu-thich i{display:inline-block;width:12px;height:12px;background:var(--wine-tint);border:1.5px solid var(--wine);vertical-align:-1px;margin-right:6px}
 
+  /* cách tự đo: clip + ảnh 14 số đo */
+  .do-hai{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:clamp(22px,3vw,40px);align-items:start;max-width:1000px;margin:clamp(30px,4vw,48px) auto 0}
+  .do-hai figure{margin:0}
+  .do-hai video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#FBF6F3;border:1px solid var(--line)}
+  .do-hai img{width:100%;height:auto;border:1px solid var(--line)}
+  .do-hai figcaption{margin-top:12px;font-size:13px;text-align:center}
+  .do-hai figcaption a{color:var(--wine);font-weight:600;text-underline-offset:3px}
+  @media (max-width:800px){
+    .do-hai{grid-template-columns:1fr}
+    .do-clip{max-width:420px;margin-inline:auto;width:100%}
+  }
+
   /* cần biết */
   .biet{list-style:none;margin:clamp(30px,4vw,48px) auto 0;padding:0;max-width:720px}
   .biet li{border-top:1px solid var(--line);padding:14px 0 14px 26px;position:relative;font-size:14.5px}
@@ -234,7 +246,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         </div></li>
         <li><span class="so">4</span><div>
           <h3 data-vi="Tự đo tại nhà">Measure at home</h3>
-          <p data-vi="Dolinhanh sẽ gửi bạn hướng dẫn đo; kiểm tra và xác nhận số đo trước khi dựng form">We will send you measuring instructions, then check and confirm your measurements before we build the shape</p>
+          <p data-vi="Đo theo &lt;a href=&quot;#measure&quot;&gt;hướng dẫn đo&lt;/a&gt; (clip 1 phút + ảnh); Dolinhanh kiểm tra và xác nhận số đo trước khi dựng form">Follow our <a href="#measure">measuring guide</a> (1&#8209;minute clip + chart); we check and confirm your measurements before we build the shape</p>
         </div></li>
         <li class="tra"><span class="so">5</span><div>
           <h3 data-vi="Thanh toán đợt 2: 50%">Payment 2: 50%</h3>
@@ -251,6 +263,27 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         </div></li>
       </ol>
       <p class="chu-thich"><i></i><span data-vi="Ô màu = bước thanh toán">Coloured boxes = payment steps</span></p>
+    </div>
+  </section>
+
+  <!-- 02b · Cách tự đo (clip + ảnh 14 số đo, 25/10/2026) -->
+  <section class="air" id="measure">
+    <div class="wrap">
+      <div class="mid">
+        <span class="eyebrow" data-vi="Bước 4">Step 4</span>
+        <h2 style="margin-top:14px" data-vi="Cách tự đo tại nhà">How to measure at home</h2>
+        <p data-vi="Xem clip 1 phút, lưu ảnh về máy, nhờ một người đo giúp. Xong gửi số đo + 3 ảnh toàn thân qua WhatsApp.">Watch the 1-minute clip, save the chart and ask someone to measure you. Then send your numbers and 3 full-body photos on WhatsApp.</p>
+      </div>
+      <div class="do-hai">
+        <figure class="do-clip"><video controls playsinline preload="none" poster="anh/do-so-do/clip-do-so-do-en.jpg" width="720" height="1280"><source src="anh/do-so-do/clip-do-so-do-en.mp4" type="video/mp4"></video></figure>
+        <figure class="do-anh">
+          <img src="anh/do-so-do/bang-14-so-do-en.jpg" alt="How to take your 14 gown measurements: numbered body chart and 5 measuring tips" loading="lazy" width="2160" height="2700">
+          <figcaption><a href="anh/do-so-do/bang-14-so-do-en.jpg" download data-vi="Lưu ảnh về máy">Save the chart</a></figcaption>
+        </figure>
+      </div>
+      <div class="nut-hang">
+        <a class="btn" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20here%20are%20my%20measurements%20and%203%20full-body%20photos." target="_blank" rel="noopener" data-vi="Gửi số đo qua WhatsApp">Send your measurements on WhatsApp</a>
+      </div>
     </div>
   </section>
 
