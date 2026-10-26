@@ -120,7 +120,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   .chu-thich i{display:inline-block;width:12px;height:12px;background:var(--wine-tint);border:1.5px solid var(--wine);vertical-align:-1px;margin-right:6px}
 
   /* cách tự đo: clip + ảnh 14 số đo */
-  .do-hai{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:clamp(22px,3vw,40px);align-items:start;max-width:1000px;margin:clamp(30px,4vw,48px) auto 0}
+  .do-hai{display:grid;grid-template-columns:minmax(0,.46fr) minmax(0,1.3fr);gap:clamp(22px,3vw,40px);align-items:start;max-width:1180px;margin:clamp(30px,4vw,48px) auto 0}
   .do-hai figure{margin:0}
   .do-hai video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#FBF6F3;border:1px solid var(--line)}
   .do-hai img{width:100%;height:auto;border:1px solid var(--line)}
@@ -185,6 +185,64 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     footer{padding-bottom:104px}
     .ft-links a{display:inline-block;padding:8px 0}
   }
+  /* phiếu điền số đo (bấm số trên hình → điền → ảnh phiếu → WhatsApp) */
+  .pd{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(18px,2.4vw,32px);border:1px solid var(--line);background:var(--paper);padding:clamp(16px,2.4vw,28px)}
+  .pd-fig{position:sticky;top:96px;align-self:start}
+  .pd-fig svg{display:block;width:100%;height:auto}
+  .pd-th{opacity:.28;transition:opacity .2s}
+  .pd-th.on{opacity:1}
+  .pd-so{cursor:pointer;outline:none}
+  .pd-so .pd-tron{fill:#fff;stroke:var(--wine);stroke-width:3}
+  .pd-so text{fill:var(--wine);font:500 25px var(--sans);pointer-events:none}
+  .pd-so.co .pd-tron{fill:var(--wine)}
+  .pd-so.co text{fill:#fff}
+  .pd-so.on .pd-tron{stroke:var(--ink);stroke-width:6}
+  .pd-chu{font:italic 22px var(--serif);fill:#9B6B5F}
+  .pd-goi{margin-top:8px;font-size:12px;color:var(--taupe-deep);text-align:center}
+  .pd-ten{display:grid;gap:6px;margin-bottom:6px}
+  .pd-ten span,.pd-grp,.pd-them label>span:first-child{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-deep)}
+  .pd-ten input{font:500 16px var(--sans);padding:11px 14px;border:1px solid var(--taupe);background:#fff;color:var(--ink);border-radius:0}
+  .pd-grp{margin:20px 0 4px}
+  .pd-grp i{font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:12.5px}
+  .pd-it{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:12px;align-items:center;padding:9px 8px;border-bottom:1px solid var(--line);cursor:text;transition:background .2s}
+  .pd-it.on{background:var(--wine-tint)}
+  .pd-n{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--wine);color:var(--wine);display:grid;place-items:center;font-size:12.5px;font-weight:600}
+  .pd-it.co .pd-n{background:var(--wine);color:#fff}
+  .pd-t b{display:block;font-weight:600;font-size:14.5px;line-height:1.3;color:var(--ink)}
+  .pd-t i{display:block;font-family:var(--serif);font-size:13px;line-height:1.35;color:var(--taupe-deep)}
+  .pd-o{display:flex;align-items:center;gap:6px}
+  .pd-o input{width:76px;font:600 16px var(--sans);text-align:right;padding:9px 10px;border:1px solid var(--taupe);background:#fff;color:var(--wine);border-radius:0}
+  .pd-o input:focus,.pd-ten input:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 2px var(--wine-tint)}
+  .pd-o em{font-style:normal;font-size:12px;color:var(--taupe-deep);width:18px}
+  .pd-it.sai .pd-o input{border-color:#D6342C}
+  .pd-them{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:8px}
+  .pd-them label{display:grid;gap:6px;align-content:start}
+  .pd-them .pd-o input{width:100%}
+  .pd-them i{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--taupe-deep)}
+  .pd-dem{margin-top:20px;font-size:13px;color:var(--taupe-deep)}
+  .pd-dem b{color:var(--wine);font-size:15px}
+  #pdTao{margin-top:12px;width:100%;justify-content:center;border:0;cursor:pointer;font-family:var(--sans)}
+  .pd-nhac{margin-top:10px;font-size:13.5px;color:#B92A23}
+  .pd-nhac:empty{display:none}
+  .pd-hop{position:fixed;inset:0;z-index:100;background:rgba(23,19,15,.55);display:grid;place-items:center;padding:16px}
+  .pd-hop[hidden]{display:none}
+  .pd-khung{position:relative;background:#fff;width:100%;max-width:500px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:auto;padding:44px 20px 20px}
+  .pd-khung img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+  .pd-nut{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+  .pd-nut .btn{justify-content:center}
+  .pd-dong{position:absolute;top:4px;right:8px;border:0;background:none;font-size:30px;line-height:1;cursor:pointer;color:var(--ink);padding:6px 10px}
+  .pd-chu-nho{margin-top:12px;font-size:12.5px;color:var(--taupe-deep);text-align:center}
+  html.pd-mo{overflow:hidden}
+  html.pd-go .zl-noi{display:none}
+  @media (max-width:800px){
+    .pd{grid-template-columns:1fr}
+    .pd-fig{position:static;max-width:300px;width:100%;margin:0 auto}
+  }
+  @media (max-width:520px){
+    .pd-them{grid-template-columns:1fr 1fr}
+    .pd-them label:last-child{grid-column:1 / -1}
+  }
+  /* hết phiếu điền số đo */
   #quatang,.pop-qua-xong,.hero-qua,p.pop-qua{display:none!important}
 </style>
 </head>
@@ -272,17 +330,326 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
       <div class="mid">
         <span class="eyebrow" data-vi="Bước 4">Step 4</span>
         <h2 style="margin-top:14px" data-vi="Cách tự đo tại nhà">How to measure at home</h2>
-        <p data-vi="Xem clip 1 phút, lưu ảnh về máy, nhờ một người đo giúp. Xong gửi số đo + 3 ảnh toàn thân qua WhatsApp.">Watch the 1-minute clip, save the chart and ask someone to measure you. Then send your numbers and 3 full-body photos on WhatsApp.</p>
+        <p data-vi="Xem clip 1 phút, nhờ một người đo giúp, rồi bấm từng số trên hình để điền. Phiếu số đo tự tạo thành ảnh để bạn gửi qua WhatsApp.">Watch the 1&#8209;minute clip and ask someone to measure you, then tap each number to fill it in. We turn it into a measurement card for you to send on WhatsApp.</p>
       </div>
       <div class="do-hai">
-        <figure class="do-clip"><video controls playsinline preload="none" poster="anh/do-so-do/clip-do-so-do-en.jpg" width="720" height="1280"><source src="anh/do-so-do/clip-do-so-do-en.mp4" type="video/mp4"></video></figure>
-        <figure class="do-anh">
-          <img src="anh/do-so-do/bang-14-so-do-en.jpg" alt="How to take your 14 gown measurements: numbered body chart and 5 measuring tips" loading="lazy" width="2160" height="2700">
-          <figcaption><a href="anh/do-so-do/bang-14-so-do-en.jpg" download data-vi="Lưu ảnh về máy">Save the chart</a></figcaption>
-        </figure>
-      </div>
-      <div class="nut-hang">
-        <a class="btn" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20here%20are%20my%20measurements%20and%203%20full-body%20photos." target="_blank" rel="noopener" data-vi="Gửi số đo qua WhatsApp">Send your measurements on WhatsApp</a>
+        <figure class="do-clip"><video controls playsinline preload="none" poster="anh/do-so-do/clip-do-so-do-en.jpg?v=2610" width="720" height="1280"><source src="anh/do-so-do/clip-do-so-do-en.mp4?v=2610" type="video/mp4"></video><figcaption><a href="anh/do-so-do/bang-14-so-do-en.jpg?v=2610" download data-vi="Lưu ảnh hướng dẫn đo">Save the measuring guide</a></figcaption></figure>
+        <!-- phieu-do: bắt đầu (sinh từ huong-dan-do-clip/dung-phieu.py — sửa ở đó) -->
+<div class="do-anh" id="phieuDo"></div>
+<script>
+/* Phiếu điền 14 số đo trên trang made-to-measure (25–26/10/2026)
+   Khách bấm số trên hình hoặc từng dòng để điền → "Tạo phiếu số đo" vẽ ảnh JPG → gửi WhatsApp.
+   Dữ liệu hình người + thước xuất từ du-lieu.html (xuat-du-lieu.mjs) rồi gắn vào {"front":[{"d":"M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M372,224 L428,224 L430,268 L370,268 Z","f":"#FBF5F2"},{"d":"M372,224 C373,240 373,254 370,268 M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 M242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 M194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 M222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 M290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 M272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 M334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 M374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 M428,224 C427,240 427,254 430,268 M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 M558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 M606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 M578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 M510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 M528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 M466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 M426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816","s":"#9B6B5F","w":2.6},{"d":"M300,452 C312,494 346,506 384,490 M500,452 C488,494 454,506 416,490","s":"#9B6B5F","w":2.08,"o":0.8},{"d":"M352,288 C360,330 380,356 400,362 M448,288 C440,330 420,356 400,362","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M282,868 C312,876 352,876 386,862 M518,868 C488,876 448,876 414,862","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M318,1046 C326,1052 340,1054 352,1048 M482,1046 C474,1052 460,1054 448,1048","s":"#9B6B5F","w":1.56,"o":0.45},{"d":"M400,70 C352,70 334,108 336,150 C338,196 360,232 400,236 C440,232 462,196 464,150 C466,108 448,70 400,70 Z","f":"#FBF5F2","s":"#9B6B5F","w":2.6},{"d":"M400,74 C372,74 368,40 400,34 C432,40 428,74 400,74 Z","f":"#E6CFC7","s":"#9B6B5F","w":2.6},{"d":"M336,150 C334,104 360,72 400,72 C440,72 466,104 464,150 C452,118 428,104 400,108 C372,104 348,118 336,150 Z","f":"#E6CFC7","s":"#9B6B5F","w":2.6},{"d":"M338,150 C330,152 330,170 340,174 M462,150 C470,152 470,170 460,174","s":"#9B6B5F","w":1.82}],"back":[{"d":"M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M372,224 L428,224 L430,268 L370,268 Z","f":"#FBF5F2"},{"d":"M372,224 C373,240 373,254 370,268 M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 M242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 M194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 M222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 M290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 M272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 M334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 M374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 M428,224 C427,240 427,254 430,268 M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 M558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 M606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 M578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 M510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 M528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 M466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 M426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816","s":"#9B6B5F","w":2.6},{"d":"M400,280 C400,420 400,520 400,590","s":"#9B6B5F","w":1.82,"o":0.45},{"d":"M318,360 C330,400 352,420 376,420 M482,360 C470,400 448,420 424,420","s":"#9B6B5F","w":1.82,"o":0.45},{"d":"M352,280 C370,292 430,292 448,280","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M300,790 C330,812 370,812 396,800 M500,790 C470,812 430,812 404,800","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M400,700 C400,760 400,790 400,816","s":"#9B6B5F","w":1.56,"o":0.45},{"d":"M282,868 C312,876 352,876 386,862 M518,868 C488,876 448,876 414,862","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M400,70 C352,70 334,108 336,150 C338,196 360,232 400,236 C440,232 462,196 464,150 C466,108 448,70 400,70 Z","f":"#FBF5F2","s":"#9B6B5F","w":2.6},{"d":"M336,150 C334,104 360,70 400,70 C440,70 466,104 464,150 C464,196 440,226 400,228 C360,226 336,196 336,150 Z","f":"#E6CFC7","s":"#9B6B5F","w":2.6},{"d":"M400,58 C376,58 372,92 400,98 C428,92 424,58 400,58 Z","f":"#DCC0B6","s":"#9B6B5F","w":2.6}],"g":{"1":{"kind":"circ","front":"M288.8,462 Q400,493.1 511.2,462","back":"M288.8,462 Q400,430.9 511.2,462","lab":[483.2,462]},"2":{"kind":"circ","front":"M287.1,408 Q400,439.6 512.9,408","back":"M287.1,408 Q400,376.4 512.9,408","lab":[484.9,408]},"3":{"kind":"circ","front":"M297.9,506 Q400,534.6 502.1,506","back":"M297.9,506 Q400,477.4 502.1,506","lab":[474.1,506]},"4":{"kind":"circ","front":"M316.0,586 Q400,609.5 484.0,586","back":"M316.0,586 Q400,562.5 484.0,586","lab":[456,586]},"5":{"kind":"apex","front":"M342,452 L458,452","pts":[[342,452],[458,452]],"lab":[400,428]},"6":{"kind":"len","front":"M372,268 C362,330 344,400 342,458 C340,505 336,550 334,588","pts":[[372,268],[334,588]],"lab":[318,360]},"7":{"kind":"len","back":true,"front":"M400,262 L400,588","pts":[[400,262],[400,588]],"lab":[426,430]},"8":{"kind":"circ","front":"M530.2,452 Q550.4,460 570.7,452","back":"M530.2,452 Q550.4,444 570.7,452","lab":[634.7,418],"lead":[572.7,452]},"9":{"kind":"len","front":"M538,300 C556,302 574,316 574,338 L574.0,338.0 L575.6,358.7 L577.4,379.4 L579.3,400.1 L581.3,420.8 L583.5,441.5 L585.8,462.2 L588.2,482.9 L590.7,503.6 L593.4,524.3 L596.0,545.0 L598.6,565.7 L600.8,586.4 L603.0,607.1 L605.4,627.8 L607.8,648.5 L610.4,669.2 L612.9,689.9 L615.6,710.6 L618.2,731.3 L621.0,752.0","pts":[[538,300],[621,752]],"lab":[620.7,520]},"10":{"kind":"circ","front":"M575.0,752 Q591.0,758 607.0,752","back":"M575.0,752 Q591.0,746 607.0,752","lab":[633,756]},"11":{"kind":"circ","front":"M286.6,668 Q400,699.7 513.4,668","back":"M286.6,668 Q400,636.3 513.4,668","lab":[485.4,668]},"12":{"kind":"circ","front":"M270.0,748 Q400,784.4 530.0,748","back":"M270.0,748 Q400,711.6 530.0,748","lab":[502,748]},"13":{"kind":"len","front":"M256.0,588 L256.0,1400","tick":"M318.0,588 L256.0,588","pts":[[256,588],[256,1400]],"lab":[256,1010]},"14":{"kind":"len","front":"M400,284 L400,1400","pts":[[400,284],[400,1400]],"lab":[400,1010]}}} khi dựng. */
+(function () {
+  var D = {"front":[{"d":"M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M372,224 L428,224 L430,268 L370,268 Z","f":"#FBF5F2"},{"d":"M372,224 C373,240 373,254 370,268 M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 M242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 M194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 M222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 M290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 M272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 M334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 M374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 M428,224 C427,240 427,254 430,268 M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 M558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 M606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 M578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 M510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 M528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 M466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 M426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816","s":"#9B6B5F","w":2.6},{"d":"M300,452 C312,494 346,506 384,490 M500,452 C488,494 454,506 416,490","s":"#9B6B5F","w":2.08,"o":0.8},{"d":"M352,288 C360,330 380,356 400,362 M448,288 C440,330 420,356 400,362","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M282,868 C312,876 352,876 386,862 M518,868 C488,876 448,876 414,862","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M318,1046 C326,1052 340,1054 352,1048 M482,1046 C474,1052 460,1054 448,1048","s":"#9B6B5F","w":1.56,"o":0.45},{"d":"M400,70 C352,70 334,108 336,150 C338,196 360,232 400,236 C440,232 462,196 464,150 C466,108 448,70 400,70 Z","f":"#FBF5F2","s":"#9B6B5F","w":2.6},{"d":"M400,74 C372,74 368,40 400,34 C432,40 428,74 400,74 Z","f":"#E6CFC7","s":"#9B6B5F","w":2.6},{"d":"M336,150 C334,104 360,72 400,72 C440,72 466,104 464,150 C452,118 428,104 400,108 C372,104 348,118 336,150 Z","f":"#E6CFC7","s":"#9B6B5F","w":2.6},{"d":"M338,150 C330,152 330,170 340,174 M462,150 C470,152 470,170 460,174","s":"#9B6B5F","w":1.82}],"back":[{"d":"M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816 L400,816 L400,268 Z","f":"#FBF5F2"},{"d":"M372,224 L428,224 L430,268 L370,268 Z","f":"#FBF5F2"},{"d":"M372,224 C373,240 373,254 370,268 M370,268 C340,282 300,286 268,298 C252,304 244,318 242,338 M242,338 C236,420 226,500 218,560 C212,620 202,700 194,760 M194,760 C186,790 184,820 190,848 C194,862 204,866 208,852 C212,836 214,816 218,800 C222,790 224,776 222,762 M222,762 C228,700 240,628 246,566 C252,500 268,440 290,394 M290,394 C288,420 288,446 292,470 C298,506 314,550 318,586 C322,622 288,656 278,696 C273,716 272,734 272,750 M272,750 C270,830 286,940 300,1050 C304,1100 298,1150 306,1210 C314,1270 326,1310 334,1348 M334,1348 C330,1366 326,1382 332,1394 C340,1402 360,1402 370,1396 C376,1390 376,1372 374,1350 M374,1350 C376,1290 370,1220 368,1160 C366,1110 368,1080 366,1050 C362,980 378,880 400,816 M428,224 C427,240 427,254 430,268 M430,268 C460,282 500,286 532,298 C548,304 556,318 558,338 M558,338 C564,420 574,500 582,560 C588,620 598,700 606,760 M606,760 C614,790 616,820 610,848 C606,862 596,866 592,852 C588,836 586,816 582,800 C578,790 576,776 578,762 M578,762 C572,700 560,628 554,566 C548,500 532,440 510,394 M510,394 C512,420 512,446 508,470 C502,506 486,550 482,586 C478,622 512,656 522,696 C527,716 528,734 528,750 M528,750 C530,830 514,940 500,1050 C496,1100 502,1150 494,1210 C486,1270 474,1310 466,1348 M466,1348 C470,1366 474,1382 468,1394 C460,1402 440,1402 430,1396 C424,1390 424,1372 426,1350 M426,1350 C424,1290 430,1220 432,1160 C434,1110 432,1080 434,1050 C438,980 422,880 400,816","s":"#9B6B5F","w":2.6},{"d":"M400,280 C400,420 400,520 400,590","s":"#9B6B5F","w":1.82,"o":0.45},{"d":"M318,360 C330,400 352,420 376,420 M482,360 C470,400 448,420 424,420","s":"#9B6B5F","w":1.82,"o":0.45},{"d":"M352,280 C370,292 430,292 448,280","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M300,790 C330,812 370,812 396,800 M500,790 C470,812 430,812 404,800","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M400,700 C400,760 400,790 400,816","s":"#9B6B5F","w":1.56,"o":0.45},{"d":"M282,868 C312,876 352,876 386,862 M518,868 C488,876 448,876 414,862","s":"#9B6B5F","w":1.82,"o":0.55},{"d":"M400,70 C352,70 334,108 336,150 C338,196 360,232 400,236 C440,232 462,196 464,150 C466,108 448,70 400,70 Z","f":"#FBF5F2","s":"#9B6B5F","w":2.6},{"d":"M336,150 C334,104 360,70 400,70 C440,70 466,104 464,150 C464,196 440,226 400,228 C360,226 336,196 336,150 Z","f":"#E6CFC7","s":"#9B6B5F","w":2.6},{"d":"M400,58 C376,58 372,92 400,98 C428,92 424,58 400,58 Z","f":"#DCC0B6","s":"#9B6B5F","w":2.6}],"g":{"1":{"kind":"circ","front":"M288.8,462 Q400,493.1 511.2,462","back":"M288.8,462 Q400,430.9 511.2,462","lab":[483.2,462]},"2":{"kind":"circ","front":"M287.1,408 Q400,439.6 512.9,408","back":"M287.1,408 Q400,376.4 512.9,408","lab":[484.9,408]},"3":{"kind":"circ","front":"M297.9,506 Q400,534.6 502.1,506","back":"M297.9,506 Q400,477.4 502.1,506","lab":[474.1,506]},"4":{"kind":"circ","front":"M316.0,586 Q400,609.5 484.0,586","back":"M316.0,586 Q400,562.5 484.0,586","lab":[456,586]},"5":{"kind":"apex","front":"M342,452 L458,452","pts":[[342,452],[458,452]],"lab":[400,428]},"6":{"kind":"len","front":"M372,268 C362,330 344,400 342,458 C340,505 336,550 334,588","pts":[[372,268],[334,588]],"lab":[318,360]},"7":{"kind":"len","back":true,"front":"M400,262 L400,588","pts":[[400,262],[400,588]],"lab":[426,430]},"8":{"kind":"circ","front":"M530.2,452 Q550.4,460 570.7,452","back":"M530.2,452 Q550.4,444 570.7,452","lab":[634.7,418],"lead":[572.7,452]},"9":{"kind":"len","front":"M538,300 C556,302 574,316 574,338 L574.0,338.0 L575.6,358.7 L577.4,379.4 L579.3,400.1 L581.3,420.8 L583.5,441.5 L585.8,462.2 L588.2,482.9 L590.7,503.6 L593.4,524.3 L596.0,545.0 L598.6,565.7 L600.8,586.4 L603.0,607.1 L605.4,627.8 L607.8,648.5 L610.4,669.2 L612.9,689.9 L615.6,710.6 L618.2,731.3 L621.0,752.0","pts":[[538,300],[621,752]],"lab":[620.7,520]},"10":{"kind":"circ","front":"M575.0,752 Q591.0,758 607.0,752","back":"M575.0,752 Q591.0,746 607.0,752","lab":[633,756]},"11":{"kind":"circ","front":"M286.6,668 Q400,699.7 513.4,668","back":"M286.6,668 Q400,636.3 513.4,668","lab":[485.4,668]},"12":{"kind":"circ","front":"M270.0,748 Q400,784.4 530.0,748","back":"M270.0,748 Q400,711.6 530.0,748","lab":[502,748]},"13":{"kind":"len","front":"M256.0,588 L256.0,1400","tick":"M318.0,588 L256.0,588","pts":[[256,588],[256,1400]],"lab":[256,1010]},"14":{"kind":"len","front":"M400,284 L400,1400","pts":[[400,284],[400,1400]],"lab":[400,1010]}}};
+  var WA = '84359950588';
+  var BAT_BUOC = [1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14];
+  var TX = {
+    en: {
+      m: [['Full bust', 'Over both apexes, level across the back'], ['High bust', 'Under the arms, above the bust'], ['Underbust', 'Where your bra band sits'], ['Natural waist', 'Lean sideways — the crease is your waist'], ['Apex to apex', 'Straight across, point to point'], ['Front waist length', 'Side neck → over the apex → waist'], ['Back length', 'Neck bone → waist'], ['Bicep', 'Fullest part, arm relaxed'], ['Sleeve length', 'Shoulder point → elbow → sleeve end'], ['Wrist', 'Where the sleeve will end'], ['High hip', '8–10 cm below the waist'], ['Full hip', 'Fullest part, feet together'], ['Waist to floor', 'Down your side, barefoot'], ['Hollow to floor', 'Barefoot']],
+      groups: ['Bodice', 'Sleeves', 'Hips + lengths', 'You'], sleeve: 'only if your gown has sleeves',
+      ten: 'Your name', cao: 'Height', nang: 'Weight', got: 'Heel height', gotGoi: 'no shoes yet? put 7',
+      back: 'Back view', heel: '+ heel height', goi: 'Tap a number on the figure to fill it in',
+      card: 'MEASUREMENT CARD', tenTrong: 'My measurements', donvi: 'all in cm',
+      thieu: 'Still missing: ', thieu2: '. Fill them in, or tap the button again to make the card anyway.',
+      chan: 'Send with 3 full-body photos (front · side · back)', daDien: 'filled',
+      msg: 'Hi Dolinhanh Bridal, here are my measurements (cm):', msgTen: 'Name', msgCuoi: "I'll attach my measurement card and 3 full-body photos (front · side · back).",
+      file: 'measurements', ngang: 'Height', kg: 'Weight', gotNgan: 'Heel'
+    },
+    vi: {
+      m: [['Vòng ngực đầy', 'Qua 2 đỉnh ngực, thước ngang ở lưng'], ['Vòng ngực trên', 'Sát dưới nách, trên bầu ngực'], ['Vòng chân ngực', 'Đúng chỗ dây áo lót nằm'], ['Vòng eo tự nhiên', 'Nghiêng người, chỗ gập là eo'], ['Khoảng cách 2 đỉnh ngực', 'Đo thẳng từ đỉnh này sang đỉnh kia'], ['Dài thân trước', 'Chân cổ → qua đỉnh ngực → eo'], ['Dài lưng', 'Đốt xương gáy → eo'], ['Vòng bắp tay', 'Chỗ to nhất, tay thả lỏng'], ['Dài tay', 'Đầu vai → qua khuỷu → chỗ hết tay áo'], ['Vòng cổ tay', 'Đúng chỗ tay áo kết thúc'], ['Vòng mông trên', 'Dưới eo 8–10 cm'], ['Vòng mông', 'Chỗ đầy nhất, khép chân'], ['Eo xuống sàn', 'Dọc bên hông, chân trần'], ['Hõm cổ xuống sàn', 'Chân trần']],
+      groups: ['Thân trên', 'Tay áo', 'Mông + chiều dài', 'Thông tin thêm'], sleeve: 'chỉ đo khi váy có tay',
+      ten: 'Tên của bạn', cao: 'Chiều cao', nang: 'Cân nặng', got: 'Độ cao gót', gotGoi: 'chưa có giày: ghi 7',
+      back: 'Mặt sau', heel: '+ độ cao gót', goi: 'Bấm số trên hình để điền',
+      card: 'PHIẾU SỐ ĐO', tenTrong: 'Số đo của tôi', donvi: 'đơn vị cm',
+      thieu: 'Còn thiếu số: ', thieu2: '. Điền nốt, hoặc bấm nút lần nữa để vẫn tạo phiếu.',
+      chan: 'Gửi kèm 3 ảnh toàn thân (trước · ngang · sau)', daDien: 'đã điền',
+      msg: 'Chào Dolinhanh Bridal, đây là số đo của mình (cm):', msgTen: 'Tên', msgCuoi: 'Mình gửi kèm ảnh phiếu số đo và 3 ảnh toàn thân (trước · ngang · sau).',
+      file: 'so-do', ngang: 'Chiều cao', kg: 'Cân nặng', gotNgan: 'Gót'
+    }
+  };
+  var lang = function () { return document.documentElement.lang === 'vi' ? 'vi' : 'en'; };
+  var T = function () { return TX[lang()]; };
+  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var dv = function (k) { return ' data-vi="' + esc(TX.vi[k]) + '"'; };
+  var KEY = 'dla-phieu-do';
+  var LOGO = new Image(); LOGO.src = 'anh/do-so-do/logo-phieu.png'; // logo in lên ảnh phiếu (chống lấy ảnh)
+  var root = document.getElementById('phieuDo');
+  if (!root) return;
+
+  /* ---------- hình người (SVG trên trang) ---------- */
+  function partsSVG(list) {
+    return list.map(function (p) {
+      return '<path d="' + p.d + '" fill="' + (p.f || 'none') + '"' + (p.s ? ' stroke="' + p.s + '" stroke-width="' + p.w + '" stroke-linecap="round" stroke-linejoin="round"' : '') + (p.o != null ? ' opacity="' + p.o + '"' : '') + '/>';
+    }).join('');
+  }
+  function tapeSVG(g, band) {
+    var s = '', col = '#D8C3A5', tick = '#7C5A4E', b = band || 8;
+    var draw = function (d) { return '<path d="' + d + '" fill="none" stroke="' + col + '" stroke-width="' + b + '"/><path d="' + d + '" fill="none" stroke="' + tick + '" stroke-width="' + (b * .62) + '" stroke-dasharray="1.1 5.6" opacity=".7"/>'; };
+    if (g.kind === 'circ') s += '<path d="' + g.back + '" fill="none" stroke="' + tick + '" stroke-width="1.6" stroke-dasharray="5 5" opacity=".55"/>' + draw(g.front);
+    else if (g.kind === 'apex') { s += '<path d="' + g.front + '" stroke="' + tick + '" stroke-width="2.4" fill="none"/>'; g.pts.forEach(function (p) { s += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="6" fill="#7A2638"/>'; }); }
+    else {
+      if (g.tick) s += '<path d="' + g.tick + '" stroke="' + tick + '" stroke-width="1.6" stroke-dasharray="4 4" fill="none" opacity=".7"/>';
+      s += draw(g.front); g.pts.forEach(function (p) { s += '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="5.5" fill="#7A2638"/>'; });
+    }
+    return s;
+  }
+  var LAB7 = [718, 215];
+  function figSVG() {
+    var s = '<path d="M150,1401 L650,1401" stroke="#B07E72" stroke-width="2" opacity=".5"/>' + partsSVG(D.front);
+    for (var n = 1; n <= 14; n++) if (n !== 7) s += '<g class="pd-th" data-n="' + n + '">' + tapeSVG(D.g[n]) + '</g>';
+    s += '<g transform="translate(560,60) scale(.3)">' + partsSVG(D.back) + '<g class="pd-th" data-n="7">' + tapeSVG(D.g[7], 16) + '</g></g>';
+    s += '<text x="680" y="44" text-anchor="middle" class="pd-chu" data-k="back">' + esc(T().back) + '</text>';
+    s += '<text x="560" y="1388" class="pd-chu" data-k="heel">' + esc(T().heel) + '</text>';
+    for (n = 1; n <= 14; n++) {
+      var g = D.g[n], l = n === 7 ? LAB7 : g.lab;
+      s += '<g class="pd-so" data-n="' + n + '" role="button" tabindex="-1" aria-label="' + n + '">' +
+        (g.lead ? '<path d="M' + g.lead[0] + ',' + g.lead[1] + ' L' + l[0] + ',' + l[1] + '" stroke="#7A2638" stroke-width="1.6"/>' : '') +
+        '<circle class="pd-cham" cx="' + l[0] + '" cy="' + l[1] + '" r="44" fill="transparent"/>' +
+        '<circle class="pd-tron" cx="' + l[0] + '" cy="' + l[1] + '" r="24"/>' +
+        '<text x="' + l[0] + '" y="' + (l[1] + 8.5) + '" text-anchor="middle">' + n + '</text></g>';
+    }
+    return '<svg viewBox="0 0 800 1460" aria-hidden="false">' + s + '</svg>';
+  }
+
+  /* ---------- danh sách ô nhập ---------- */
+  function rowHTML(n) {
+    var en = TX.en.m[n - 1], vi = TX.vi.m[n - 1];
+    return '<label class="pd-it" data-n="' + n + '" for="pdM' + n + '"><span class="pd-n">' + n + '</span>' +
+      '<span class="pd-t"><b data-vi="' + esc(vi[0]) + '">' + esc(en[0]) + '</b><i data-vi="' + esc(vi[1]) + '">' + esc(en[1]) + '</i></span>' +
+      '<span class="pd-o"><input id="pdM' + n + '" data-n="' + n + '" inputmode="decimal" autocomplete="off" enterkeyhint="next" maxlength="6"><em>cm</em></span></label>';
+  }
+  function grp(i, extra) {
+    return '<div class="pd-grp"><span data-vi="' + esc(TX.vi.groups[i]) + '">' + esc(TX.en.groups[i]) + '</span>' + (extra || '') + '</div>';
+  }
+  var h = '<div class="pd"><div class="pd-fig">' + figSVG() + '<p class="pd-goi"' + dv('goi') + '>' + TX.en.goi + '</p></div><div class="pd-ds">';
+  h += '<label class="pd-ten" for="pdTen"><span' + dv('ten') + '>' + TX.en.ten + '</span><input id="pdTen" autocomplete="name" enterkeyhint="next" maxlength="40"></label>';
+  h += grp(0); for (var i = 1; i <= 7; i++) h += rowHTML(i);
+  h += grp(1, ' <i' + dv('sleeve') + '>· ' + TX.en.sleeve + '</i>'); for (i = 8; i <= 10; i++) h += rowHTML(i);
+  h += grp(2); for (i = 11; i <= 14; i++) h += rowHTML(i);
+  h += grp(3) + '<div class="pd-them">' +
+    '<label for="pdCao"><span' + dv('cao') + '>' + TX.en.cao + '</span><span class="pd-o"><input id="pdCao" inputmode="decimal" maxlength="5" enterkeyhint="next"><em>cm</em></span></label>' +
+    '<label for="pdNang"><span' + dv('nang') + '>' + TX.en.nang + '</span><span class="pd-o"><input id="pdNang" inputmode="decimal" maxlength="5" enterkeyhint="next"><em>kg</em></span></label>' +
+    '<label for="pdGot"><span' + dv('got') + '>' + TX.en.got + '</span><span class="pd-o"><input id="pdGot" inputmode="decimal" maxlength="4" placeholder="7" enterkeyhint="done"><em>cm</em></span><i' + dv('gotGoi') + '>' + TX.en.gotGoi + '</i></label></div>';
+  h += '<p class="pd-dem"><b id="pdDem">0</b>/14 <span' + dv('daDien') + '>' + TX.en.daDien + '</span></p>';
+  h += '<button type="button" class="btn" id="pdTao" data-vi="Tạo phiếu số đo">Create my measurement card</button>';
+  h += '<p class="pd-nhac" id="pdNhac" aria-live="polite"></p></div></div>';
+  root.innerHTML = h;
+
+  var svg = root.querySelector('svg');
+  var inputs = {}; for (i = 1; i <= 14; i++) inputs[i] = document.getElementById('pdM' + i);
+  var extra = { ten: document.getElementById('pdTen'), cao: document.getElementById('pdCao'), nang: document.getElementById('pdNang'), got: document.getElementById('pdGot') };
+  var thuTu = [extra.ten].concat([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map(function (n) { return inputs[n]; }), [extra.cao, extra.nang, extra.got]);
+
+  function chon(n) {
+    svg.querySelectorAll('.pd-th,.pd-so').forEach(function (e) { e.classList.toggle('on', +e.getAttribute('data-n') === n); });
+    root.querySelectorAll('.pd-it').forEach(function (e) { e.classList.toggle('on', +e.getAttribute('data-n') === n); });
+  }
+  var so = function (v) { v = String(v || '').trim().replace(',', '.'); return /^\d{1,3}(\.\d{1,2})?$/.test(v) ? v : ''; };
+  function capNhat() {
+    var c = 0;
+    for (var n = 1; n <= 14; n++) {
+      var ok = !!so(inputs[n].value);
+      if (ok) c++;
+      inputs[n].closest('.pd-it').classList.toggle('co', ok);
+      svg.querySelector('.pd-so[data-n="' + n + '"]').classList.toggle('co', ok);
+      inputs[n].closest('.pd-it').classList.toggle('sai', !!inputs[n].value.trim() && !ok);
+    }
+    document.getElementById('pdDem').textContent = c;
+    luu();
+  }
+  function luu() {
+    var o = { ten: extra.ten.value, cao: extra.cao.value, nang: extra.nang.value, got: extra.got.value };
+    for (var n = 1; n <= 14; n++) o[n] = inputs[n].value;
+    try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) { }
+  }
+  try {
+    var cu = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (cu) { ['ten', 'cao', 'nang', 'got'].forEach(function (k) { if (cu[k]) extra[k].value = cu[k]; }); for (i = 1; i <= 14; i++) if (cu[i]) inputs[i].value = cu[i]; }
+  } catch (e) { }
+
+  svg.querySelectorAll('.pd-so').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var n = +b.getAttribute('data-n'); chon(n);
+      inputs[n].focus({ preventScroll: true });
+      inputs[n].closest('.pd-it').scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  });
+  thuTu.forEach(function (el, k) {
+    el.addEventListener('focus', function () { if (el.dataset.n) chon(+el.dataset.n); });
+    el.addEventListener('input', capNhat);
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); var nx = thuTu[k + 1]; if (nx) nx.focus(); else el.blur(); }
+    });
+  });
+  capNhat();
+  // đang gõ số thì ẩn nút WhatsApp nổi cho khỏi che ô nhập (điện thoại)
+  root.addEventListener('focusin', function () { document.documentElement.classList.add('pd-go'); });
+  root.addEventListener('focusout', function () { setTimeout(function () { if (!root.contains(document.activeElement)) document.documentElement.classList.remove('pd-go'); }, 150); });
+  // trang đổi EN/VI (đặt html lang) → đổi chữ nằm trong hình
+  new MutationObserver(function () {
+    svg.querySelectorAll('.pd-chu').forEach(function (e) { e.textContent = T()[e.getAttribute('data-k')]; });
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  /* ---------- ảnh phiếu số đo (canvas) ---------- */
+  function veHinh(ctx, list) {
+    list.forEach(function (p) {
+      var P = new Path2D(p.d);
+      ctx.globalAlpha = p.o != null ? p.o : 1;
+      if (p.f) { ctx.fillStyle = p.f; ctx.fill(P); }
+      if (p.s) { ctx.strokeStyle = p.s; ctx.lineWidth = p.w; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.stroke(P); }
+    });
+    ctx.globalAlpha = 1;
+  }
+  function veThuoc(ctx, g, band) {
+    var b = band || 8, net = function (d, w, mau, dash, a) { ctx.globalAlpha = a == null ? 1 : a; ctx.setLineDash(dash || []); ctx.lineWidth = w; ctx.strokeStyle = mau; ctx.lineCap = 'butt'; ctx.stroke(new Path2D(d)); ctx.setLineDash([]); ctx.globalAlpha = 1; };
+    var cham = function (x, y, r) { ctx.fillStyle = '#7A2638'; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); };
+    var bang = function (d) { net(d, b, '#D8C3A5'); net(d, b * .62, '#7C5A4E', [1.1, 5.6], .7); };
+    if (g.kind === 'circ') { net(g.back, 1.6, '#7C5A4E', [5, 5], .55); bang(g.front); }
+    else if (g.kind === 'apex') { net(g.front, 2.4, '#7C5A4E'); g.pts.forEach(function (p) { cham(p[0], p[1], 6); }); }
+    else { if (g.tick) net(g.tick, 1.6, '#7C5A4E', [4, 4], .7); bang(g.front); g.pts.forEach(function (p) { cham(p[0], p[1], 5.5); }); }
+  }
+  function veSo(ctx, n, x, y, r, lead) {
+    if (lead) { ctx.strokeStyle = '#7A2638'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(lead[0], lead[1]); ctx.lineTo(x, y); ctx.stroke(); }
+    ctx.fillStyle = '#7A2638'; ctx.strokeStyle = '#fff'; ctx.lineWidth = r * .14;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#fff'; ctx.font = '500 ' + Math.round(r * 1.05) + 'px Montserrat, Helvetica, Arial'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(String(n), x, y + r * .05);
+  }
+  function chuGian(ctx, txt, x, y, gian) { // chữ giãn cách (letter-spacing) thủ công
+    var cx = x; for (var k = 0; k < txt.length; k++) { ctx.fillText(txt[k], cx, y); cx += ctx.measureText(txt[k]).width + gian; }
+  }
+  function vePhieu() {
+    var t = T(), W = 1080, H = 1350, K = 2, c = document.createElement('canvas');
+    c.width = W * K; c.height = H * K;
+    var ctx = c.getContext('2d'); ctx.scale(K, K);
+    ctx.fillStyle = '#FBF6F3'; ctx.fillRect(0, 0, W, H);
+    ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = '#9B6B5F'; ctx.font = '500 15px Montserrat, Helvetica, Arial';
+    chuGian(ctx, 'DOLINHANH BRIDAL · ' + t.card, 60, 78, 3.6);
+    var ten = extra.ten.value.trim() || t.tenTrong;
+    ctx.fillStyle = '#17130F'; ctx.font = '400 50px "Playfair Display", Georgia, serif'; ctx.fillText(ten, 60, 142, 740);
+    var coLogo = LOGO.complete && LOGO.naturalWidth;
+    if (coLogo) ctx.drawImage(LOGO, W - 60 - 160, 46, 160, 160 * LOGO.naturalHeight / LOGO.naturalWidth);
+    var d = new Date(), ngay = ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + d.getFullYear();
+    ctx.fillStyle = '#6F6C69'; ctx.font = 'italic 400 19px "Playfair Display", Georgia, serif'; ctx.fillText(ngay + ' · ' + t.donvi, 60, 180);
+    // hình người + thước + số
+    ctx.save(); ctx.translate(14, 222); ctx.scale(.64, .64);
+    ctx.strokeStyle = 'rgba(176,126,114,.5)'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(150, 1401); ctx.lineTo(650, 1401); ctx.stroke();
+    veHinh(ctx, D.front);
+    [14, 13, 12, 11, 4, 3, 2, 1, 5, 6, 8, 9, 10].forEach(function (n) { veThuoc(ctx, D.g[n]); });
+    ctx.save(); ctx.translate(560, 60); ctx.scale(.3, .3); veHinh(ctx, D.back); veThuoc(ctx, D.g[7], 16); ctx.restore();
+    [14, 13, 12, 11, 4, 3, 2, 1, 5, 6, 8, 9, 10].forEach(function (n) { var g = D.g[n]; veSo(ctx, n, g.lab[0], g.lab[1], 19, g.lead); });
+    veSo(ctx, 7, LAB7[0], LAB7[1], 19);
+    ctx.fillStyle = '#9B6B5F'; ctx.font = 'italic 22px "Playfair Display", Georgia, serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(t.back, 680, 44); ctx.textAlign = 'left'; ctx.font = 'italic 26px "Playfair Display", Georgia, serif'; ctx.fillText(t.heel, 560, 1388);
+    ctx.restore();
+    if (coLogo) { ctx.globalAlpha = .07; ctx.drawImage(LOGO, 270 - 165, 640 - 91, 330, 330 * LOGO.naturalHeight / LOGO.naturalWidth); ctx.globalAlpha = 1; }
+    // bảng số
+    var X = 560, R = 1020, y = 246;
+    var nhom = [[0, 1, 7], [1, 8, 10], [2, 11, 14]];
+    nhom.forEach(function (gr, gi) {
+      if (gi) { ctx.strokeStyle = '#E6D8D2'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(X, y - 14); ctx.lineTo(R, y - 14); ctx.stroke(); y += 8; }
+      ctx.fillStyle = '#9B6B5F'; ctx.font = '500 13px Montserrat, Helvetica, Arial'; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+      chuGian(ctx, t.groups[gr[0]].toUpperCase(), X, y, 2.6); y += 30;
+      for (var n = gr[1]; n <= gr[2]; n++) {
+        veSo(ctx, n, X + 15, y - 7, 15);
+        ctx.fillStyle = '#17130F'; ctx.font = '500 19px Montserrat, Helvetica, Arial'; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+        ctx.fillText(t.m[n - 1][0], X + 42, y, 300);
+        var v = so(inputs[n].value);
+        ctx.textAlign = 'right';
+        if (v) { ctx.fillStyle = '#7A2638'; ctx.font = '600 23px Montserrat, Helvetica, Arial'; ctx.fillText(v, R - 34, y + 1); ctx.fillStyle = '#9B6B5F'; ctx.font = '400 15px Montserrat, Helvetica, Arial'; ctx.fillText('cm', R, y); }
+        else { ctx.fillStyle = '#C9BDB7'; ctx.font = '400 22px Montserrat, Helvetica, Arial'; ctx.fillText('—', R, y); }
+        ctx.strokeStyle = '#EFE5E0'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(X + 42, y + 15); ctx.lineTo(R, y + 15); ctx.stroke();
+        y += 53;
+      }
+      y += 14;
+    });
+    // chiều cao · cân nặng · gót
+    var o3 = [[t.ngang, so(extra.cao.value), 'cm'], [t.kg, so(extra.nang.value), 'kg'], [t.gotNgan, so(extra.got.value), 'cm']];
+    var w3 = (R - X) / 3; y += 6;
+    o3.forEach(function (o, k) {
+      var x = X + k * w3;
+      ctx.textAlign = 'left'; ctx.fillStyle = '#9B6B5F'; ctx.font = '500 13px Montserrat, Helvetica, Arial'; chuGian(ctx, o[0].toUpperCase(), x, y, 2.2);
+      ctx.fillStyle = o[1] ? '#7A2638' : '#C9BDB7'; ctx.font = (o[1] ? '600 30px' : '400 26px') + ' Montserrat, Helvetica, Arial';
+      ctx.fillText(o[1] || '—', x, y + 40);
+      if (o[1]) { var w = ctx.measureText(o[1]).width; ctx.fillStyle = '#9B6B5F'; ctx.font = '400 16px Montserrat, Helvetica, Arial'; ctx.fillText(' ' + o[2], x + w, y + 40); }
+    });
+    // chân phiếu
+    ctx.fillStyle = '#7A2638'; ctx.fillRect(0, H - 64, W, 64);
+    ctx.fillStyle = '#fff'; ctx.font = '500 17px Montserrat, Helvetica, Arial'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(t.chan + '  ·  WhatsApp +84 359 950 588', W / 2, H - 32);
+    return c;
+  }
+  function loiNhan() {
+    var t = T(), dong = [t.msg];
+    if (extra.ten.value.trim()) dong.push(t.msgTen + ': ' + extra.ten.value.trim());
+    for (var n = 1; n <= 14; n++) dong.push(n + '. ' + t.m[n - 1][0] + ': ' + (so(inputs[n].value) || '—'));
+    var phu = [];
+    if (so(extra.cao.value)) phu.push(t.ngang + ' ' + so(extra.cao.value) + ' cm');
+    if (so(extra.nang.value)) phu.push(t.kg + ' ' + so(extra.nang.value) + ' kg');
+    if (so(extra.got.value)) phu.push(t.gotNgan + ' ' + so(extra.got.value) + ' cm');
+    if (phu.length) dong.push(phu.join(' · '));
+    dong.push('', t.msgCuoi);
+    return dong.join('\n');
+  }
+
+  /* ---------- hộp xem phiếu + gửi ---------- */
+  var hop = document.createElement('div');
+  hop.className = 'pd-hop'; hop.hidden = true;
+  hop.innerHTML = '<div class="pd-khung" role="dialog" aria-modal="true"><button type="button" class="pd-dong" aria-label="Close">×</button>' +
+    '<img id="pdAnh" alt=""><div class="pd-nut"><a class="btn" id="pdGui" href="#" data-vi="Gửi qua WhatsApp">Send on WhatsApp</a>' +
+    '<a class="btn vien" id="pdLuu" href="#" download data-vi="Lưu ảnh phiếu">Save the card</a></div>' +
+    '<p class="pd-chu-nho" data-vi="Gửi kèm ảnh phiếu + 3 ảnh toàn thân (trước · ngang · sau) trong khung chat WhatsApp.">Attach the card + 3 full-body photos (front · side · back) in the WhatsApp chat.</p></div>';
+  document.body.appendChild(hop);
+  var anh = hop.querySelector('#pdAnh'), nutGui = hop.querySelector('#pdGui'), nutLuu = hop.querySelector('#pdLuu');
+  var tep = null, urlAnh = '';
+  function dong() { hop.hidden = true; document.documentElement.classList.remove('pd-mo'); }
+  hop.querySelector('.pd-dong').addEventListener('click', dong);
+  hop.addEventListener('click', function (e) { if (e.target === hop) dong(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !hop.hidden) dong(); });
+
+  var lanTruoc = '';
+  document.getElementById('pdTao').addEventListener('click', function () {
+    var nhac = document.getElementById('pdNhac'), t = T();
+    var thieu = BAT_BUOC.filter(function (n) { return !so(inputs[n].value); });
+    var khoa = thieu.join(',');
+    if (thieu.length && khoa !== lanTruoc) {
+      lanTruoc = khoa;
+      nhac.textContent = t.thieu + thieu.join(', ') + t.thieu2;
+      inputs[thieu[0]].focus(); inputs[thieu[0]].closest('.pd-it').scrollIntoView({ block: 'center', behavior: 'smooth' });
+      return;
+    }
+    nhac.textContent = '';
+    var mau = 'ẮẶẤẦẨỘỞỨƯƠơưđĐ ' + extra.ten.value;
+    Promise.all([document.fonts.load('500 19px Montserrat', mau), document.fonts.load('600 23px Montserrat', '0123456789'),
+      document.fonts.load('400 50px "Playfair Display"', mau), document.fonts.load('italic 400 22px "Playfair Display"', mau),
+      LOGO.decode ? LOGO.decode().catch(function () { }) : null]).catch(function () { }).then(function () {
+        var c = vePhieu();
+        urlAnh = c.toDataURL('image/jpeg', .9);
+        anh.src = urlAnh; anh.alt = T().card;
+        var tenTep = 'dolinhanh-' + T().file + '-' + (extra.ten.value.trim() || 'bride').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/gi, 'd').replace(/[^\w]+/g, '-').toLowerCase() + '.jpg';
+        nutLuu.href = urlAnh; nutLuu.setAttribute('download', tenTep);
+        tep = null;
+        c.toBlob(function (b) { if (b && window.File) tep = new File([b], tenTep, { type: 'image/jpeg' }); }, 'image/jpeg', .9);
+        hop.hidden = false; document.documentElement.classList.add('pd-mo');
+        if (window.fbq) try { fbq('trackCustom', 'MeasurementCard'); } catch (e) { }
+      });
+  });
+  nutGui.addEventListener('click', function (e) {
+    e.preventDefault();
+    var msg = loiNhan(), wa = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+    var dt = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && /Mac/.test(navigator.platform));
+    if (dt && tep && navigator.canShare && navigator.canShare({ files: [tep] })) {
+      navigator.share({ files: [tep], text: msg }).catch(function () { window.location.href = wa; });
+      return;
+    }
+    var a = document.createElement('a'); a.href = urlAnh; a.download = nutLuu.getAttribute('download'); document.body.appendChild(a); a.click(); a.remove();
+    window.open(wa, '_blank', 'noopener');
+  });
+})();
+</script>
+<!-- phieu-do: hết -->
       </div>
     </div>
   </section>
