@@ -1,6 +1,7 @@
-/* Ưu đãi US$100 · 24 giờ — CHỈ web riêng vietnamweddinggown.com (chị Linh 17/10/2026)
-   - Giảm US$100 khi ĐẶT CỌC 30% váy CÓ SẴN trong 24 giờ (không áp dụng may đo). Cọc = 30% × (giá váy − US$100).
-   - 24 giờ đếm từ lần đầu khách vào web (localStorage), hết giờ thì không hiện nữa.
+/* Ưu đãi US$100 · 7 ngày — CHỈ web riêng vietnamweddinggown.com (chị Linh 17/10/2026; 28/10 đổi 24 giờ → 7 ngày)
+   - Giảm US$100 khi ĐẶT CỌC 30% váy CÓ SẴN trong 7 ngày (không áp dụng may đo). Cọc = 30% × (giá váy − US$100).
+   - 7 ngày đếm từ lần đầu khách vào web (localStorage), hết hạn thì không hiện nữa.
+   - Mỗi khách 1 MÃ RIÊNG (DLA100-XXXX, lưu localStorage) — hiện trên thẻ, kèm trong mọi tin WhatsApp + mail báo chị → nhân viên phân biệt được từng khách.
    - Không phủ đen, trang vẫn cuộn được.
      Máy tính: hiện sau 7 giây / cuộn 500px · thẻ góc phải, trên nút WhatsApp nổi (góc trái là chữ bìa trang chủ).
      Điện thoại: hiện sau 10 giây / cuộn nửa màn hình · thẻ gọn dưới đáy (2 ý gộp 1 dòng).
@@ -8,7 +9,7 @@
    - Nút "Book now" → khung đặt váy (chị chốt 17/10: khách điền thông tin → chuyển khoản thẳng STK, KHÔNG PayPal → nút cuối nhắn WhatsApp):
        B1 khách điền mã váy (sẵn mã trong giỏ) · tên · WhatsApp · email · ngày cưới · quốc gia → mail báo chị (MAIL_URL, như form đặt lịch)
        B2 tính tiền (giá − 100, cọc 30%) + STK ACB anh Cường (giống trang made-to-measure #pay) → khách CHUYỂN KHOẢN XONG bấm
-          "I've paid · Send receipt on WhatsApp" = tin tiếng Anh "I have transferred my 30% deposit…" có mã "US$100 OFF – 24H" + "Here is my transfer receipt:" → khách đính kèm ẢNH BILL trong WhatsApp rồi gửi (wa.me không tự gắn ảnh được).
+          "I've paid · Send receipt on WhatsApp" = tin tiếng Anh "I have transferred my 30% deposit…" có "US$100 OFF – 7 DAYS · code DLA100-XXXX" + "Here is my transfer receipt:" → khách đính kèm ẢNH BILL trong WhatsApp rồi gửi (wa.me không tự gắn ảnh được).
           Váy chưa có giá → nút "Send on WhatsApp" hỏi giá trước.
    - Còn hạn thì MỌI link WhatsApp khác (nút nổi, giỏ hàng "Order on WhatsApp", form) cũng tự kèm dòng mã + hạn → nhân viên nhận ra.
    - dung-web-vwg.py chèn file này vào các trang web riêng (trừ made-to-measure). Web chính dolinhanhbridal.com KHÔNG nạp.
@@ -18,76 +19,86 @@
   if(!/(^|\.)vietnamweddinggown\.com$/.test(H) && !/^(localhost|127\.0\.0\.1)$/.test(H)) return;  /* chặn web chính */
   if(window.__uu100) return; window.__uu100 = 1;
 
-  var NGAY = 864e5, GIAM = 100, COC = 0.3, K_T0 = "vwg-uu100-t0", K_DONG = "vwg-uu100-dong";
-  var WA = "84359950588", MA = "US$100 OFF – 24H";
+  /* 28/10: khoá localStorage mới → mọi khách (cả khách đã hết 24 giờ cũ) được 7 ngày tính lại từ lần vào tới */
+  var HAN = 7 * 864e5, GIAM = 100, COC = 0.3, K_T0 = "vwg-uu7n-t0", K_DONG = "vwg-uu7n-dong", K_MA = "vwg-uu7n-ma";
+  var WA = "84359950588", MA = "US$100 OFF – 7 DAYS";
   var MAIL_URL = "https://script.google.com/macros/s/AKfycbwlmpyoY3b-iCmO9ZoVeUhm0wYJb4CrQ6I9ezsadk4UhDx1JS3qAEN7MWNOL_DGgkiV/exec";
   var TK = [["ten", "DO XUAN CUONG"], ["so", "2288888"], ["nh", "ACB – Asia Commercial Bank"], ["swift", "ASCBVNVX"]];
   function lay(k){ try{ return localStorage.getItem(k); }catch(_){ return null; } }
   function dat(k, v){ try{ localStorage.setItem(k, v); }catch(_){} }
   function bo(k){ try{ localStorage.removeItem(k); }catch(_){} }
-  try{ if(new URLSearchParams(location.search).get("uudai") === "0"){ bo(K_T0); bo(K_DONG); } }catch(_){}
+  try{ if(new URLSearchParams(location.search).get("uudai") === "0"){ bo(K_T0); bo(K_DONG); bo(K_MA); } }catch(_){}
 
   var t0 = +lay(K_T0) || 0, bay = Date.now();
   if(!t0 || t0 > bay){ t0 = bay; dat(K_T0, String(t0)); }
-  var HET = t0 + NGAY;
+  var HET = t0 + HAN;
   if(bay >= HET) return;
 
+  /* mã riêng từng khách: DLA100- + 4 ký tự (bỏ 0/O/1/I cho khỏi đọc nhầm) */
+  var MA_KH = lay(K_MA) || "";
+  if(!/^DLA100-[A-Z2-9]{4}$/.test(MA_KH)){
+    var BC = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789", r = null; MA_KH = "DLA100-";
+    try{ r = crypto.getRandomValues(new Uint8Array(4)); }catch(_){}
+    for(var i = 0; i < 4; i++) MA_KH += BC[(r ? r[i] : Math.random() * 256) & 31];
+    dat(K_MA, MA_KH);
+  }
+
   var CHU = {
-    en:{ nhan:"24-hour offer", tit:"<em>US$100</em> off your gown",
-         y1:"Book within 24 hours", y1p:"30% deposit by bank transfer",
+    en:{ nhan:"7-day offer", tit:"<em>US$100</em> off your gown",
+         y1:"Book within 7 days", y1p:"30% deposit by bank transfer",
          y2:"Ready-to-wear gowns", y2p:"not for made-to-measure",
-         gon:"<b>30% deposit within 24 hours</b> · <i>ready-to-wear only</i>",
-         con:"Ends in", nut:"Book now", the:"US$100 off", dong:"Close",
+         gon:"<b>30% deposit within 7 days</b> · <i>ready-to-wear only</i>",
+         con:"Ends in", ngay:"d ", ma:"Your code", nut:"Book now", the:"US$100 off", dong:"Close",
          dEb:"US$100 off · ends in", dTit:"Book your gown", b1:"Your details", b2:"Deposit",
          fMs:"Gown code *", fMsPh:"e.g. MS 23", fTen:"Your name *", fWa:"WhatsApp number *", fWaPh:"+1 555 123 4567",
          fEm:"Email", fNgay:"Wedding date", fNuoc:"Country", fNuocPh:"e.g. Australia",
          tiep:"Continue", chiSan:"Ready-to-wear gowns only · not for made-to-measure",
          thieu:"Please fill in the gown code, your name and WhatsApp number.",
-         uuDai:"24-hour offer", tong:"Total", coc:"Deposit 30%", hoiGia:"price on request", cocHoi:"confirmed on WhatsApp",
+         uuDai:"7-day offer", tong:"Total", coc:"Deposit 30%", hoiGia:"price on request", cocHoi:"confirmed on WhatsApp",
          ck:"Transfer to our bank in Vietnam", tkTen:"Account name", tkSo:"Account number", tkNh:"Bank", tkSwift:"SWIFT code", tkNd:"Reference",
          chep:"Copy", daChep:"Copied", cach:"Wise · SWIFT transfer · Remitly",
-         c1:"Transfer the 30% deposit", c1p:"within 24 hours to keep US$100 off",
+         c1:"Transfer the 30% deposit", c1p:"within 7 days to keep US$100 off",
          c2:"Send the receipt on WhatsApp", c2p:"a photo or screenshot of the transfer",
          h1:"Send your booking on WhatsApp", h1p:"we confirm the price and deposit",
-         h2:"Then transfer the 30% deposit", h2p:"within 24 hours to keep US$100 off",
+         h2:"Then transfer the 30% deposit", h2p:"within 7 days to keep US$100 off",
          gui:"Send on WhatsApp", guiDa:"I've paid · Send receipt on WhatsApp",
          nhacBill:"WhatsApp opens with your booking — attach the receipt photo, then send.", sua:"← Edit details" },
-    vi:{ nhan:"Ưu đãi 24 giờ", tit:"Giảm <em>US$100</em> cho váy cưới",
-         y1:"Đặt váy trong 24 giờ", y1p:"cọc 30% qua chuyển khoản",
+    vi:{ nhan:"Ưu đãi 7 ngày", tit:"Giảm <em>US$100</em> cho váy cưới",
+         y1:"Đặt váy trong 7 ngày", y1p:"cọc 30% qua chuyển khoản",
          y2:"Váy có sẵn", y2p:"không áp dụng may đo",
-         gon:"<b>Cọc 30% trong 24 giờ</b> · <i>chỉ váy có sẵn</i>",
-         con:"Còn", nut:"Đặt váy ngay", the:"Giảm US$100", dong:"Đóng",
+         gon:"<b>Cọc 30% trong 7 ngày</b> · <i>chỉ váy có sẵn</i>",
+         con:"Còn", ngay:" ngày ", ma:"Mã của bạn", nut:"Đặt váy ngay", the:"Giảm US$100", dong:"Đóng",
          dEb:"Giảm US$100 · còn", dTit:"Đặt váy", b1:"Thông tin", b2:"Đặt cọc",
          fMs:"Mã váy *", fMsPh:"VD: MS 23", fTen:"Họ tên *", fWa:"Số WhatsApp *", fWaPh:"+84 912 345 678",
          fEm:"Email", fNgay:"Ngày cưới", fNuoc:"Quốc gia", fNuocPh:"VD: Úc",
          tiep:"Tiếp tục", chiSan:"Chỉ váy có sẵn · không áp dụng may đo",
          thieu:"Vui lòng điền mã váy, họ tên và số WhatsApp.",
-         uuDai:"Ưu đãi 24 giờ", tong:"Tổng", coc:"Cọc 30%", hoiGia:"giá liên hệ", cocHoi:"báo qua WhatsApp",
+         uuDai:"Ưu đãi 7 ngày", tong:"Tổng", coc:"Cọc 30%", hoiGia:"giá liên hệ", cocHoi:"báo qua WhatsApp",
          ck:"Chuyển khoản vào tài khoản ở Việt Nam", tkTen:"Chủ tài khoản", tkSo:"Số tài khoản", tkNh:"Ngân hàng", tkSwift:"Mã SWIFT", tkNd:"Nội dung",
          chep:"Chép", daChep:"Đã chép", cach:"Wise · chuyển khoản SWIFT · Remitly",
-         c1:"Chuyển khoản cọc 30%", c1p:"trong 24 giờ để giữ ưu đãi US$100",
+         c1:"Chuyển khoản cọc 30%", c1p:"trong 7 ngày để giữ ưu đãi US$100",
          c2:"Gửi bill qua WhatsApp", c2p:"ảnh chụp biên lai chuyển khoản",
          h1:"Gửi thông tin qua WhatsApp", h1p:"Dolinhanh báo giá và số tiền cọc",
-         h2:"Rồi chuyển khoản cọc 30%", h2p:"trong 24 giờ để giữ ưu đãi US$100",
+         h2:"Rồi chuyển khoản cọc 30%", h2p:"trong 7 ngày để giữ ưu đãi US$100",
          gui:"Gửi qua WhatsApp", guiDa:"Đã chuyển khoản · Gửi bill qua WhatsApp",
          nhacBill:"WhatsApp mở sẵn tin đặt váy — đính kèm ảnh bill rồi gửi.", sua:"← Sửa thông tin" },
-    zh:{ nhan:"24 小时限时优惠", tit:"婚纱立减 <em>US$100</em>",
-         y1:"24 小时内预订", y1p:"银行转账支付 30% 定金",
+    zh:{ nhan:"7 天限时优惠", tit:"婚纱立减 <em>US$100</em>",
+         y1:"7 天内预订", y1p:"银行转账支付 30% 定金",
          y2:"现货婚纱", y2p:"定制婚纱不适用",
-         gon:"<b>24 小时内付 30% 定金</b> · <i>仅限现货婚纱</i>",
-         con:"剩余", nut:"立即预订", the:"立减 US$100", dong:"关闭",
+         gon:"<b>7 天内付 30% 定金</b> · <i>仅限现货婚纱</i>",
+         con:"剩余", ngay:" 天 ", ma:"您的优惠码", nut:"立即预订", the:"立减 US$100", dong:"关闭",
          dEb:"立减 US$100 · 剩余", dTit:"预订婚纱", b1:"您的信息", b2:"定金",
          fMs:"婚纱编号 *", fMsPh:"例如 MS 23", fTen:"姓名 *", fWa:"WhatsApp 号码 *", fWaPh:"+86 138 0000 0000",
          fEm:"邮箱", fNgay:"婚礼日期", fNuoc:"国家", fNuocPh:"例如 澳大利亚",
          tiep:"继续", chiSan:"仅限现货婚纱 · 定制不适用",
          thieu:"请填写婚纱编号、姓名和 WhatsApp 号码。",
-         uuDai:"24 小时优惠", tong:"合计", coc:"定金 30%", hoiGia:"价格请咨询", cocHoi:"WhatsApp 确认",
+         uuDai:"7 天优惠", tong:"合计", coc:"定金 30%", hoiGia:"价格请咨询", cocHoi:"WhatsApp 确认",
          ck:"转账至我们的越南银行账户", tkTen:"账户名", tkSo:"账号", tkNh:"银行", tkSwift:"SWIFT 代码", tkNd:"转账备注",
          chep:"复制", daChep:"已复制", cach:"Wise · SWIFT 转账 · Remitly",
-         c1:"转账支付 30% 定金", c1p:"24 小时内完成，保留 US$100 优惠",
+         c1:"转账支付 30% 定金", c1p:"7 天内完成，保留 US$100 优惠",
          c2:"通过 WhatsApp 发送转账凭证", c2p:"转账截图或照片",
          h1:"通过 WhatsApp 发送预订信息", h1p:"我们确认价格和定金",
-         h2:"然后转账支付 30% 定金", h2p:"24 小时内完成，保留 US$100 优惠",
+         h2:"然后转账支付 30% 定金", h2p:"7 天内完成，保留 US$100 优惠",
          gui:"通过 WhatsApp 发送", guiDa:"已转账 · WhatsApp 发送凭证",
          nhacBill:"WhatsApp 将打开预订信息 — 附上转账凭证照片后发送。", sua:"← 修改信息" }
   };
@@ -109,6 +120,8 @@
     ".uu-x:hover{color:var(--uu-ink)}",
     ".uu-tit{margin:0 0 14px;font-family:" + SERIF + ";font-weight:400;font-size:1.62rem;line-height:1.15;letter-spacing:-.005em}",
     ".uu-tit em{font-style:italic;color:var(--uu-ruou)}",
+    ".uu-ma{display:flex;align-items:baseline;gap:10px;margin:-4px 0 14px;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--uu-nau)}",
+    ".uu-ma b{padding:3px 9px;border:1px dashed var(--uu-ruou);font-size:.72rem;font-weight:600;letter-spacing:.14em;color:var(--uu-ruou)}",
     ".uu-ds{list-style:none;margin:0 0 16px;padding:12px 0 0;border-top:1px solid var(--uu-vien);display:grid;gap:9px}",
     ".uu-ds li{position:relative;padding-left:16px;line-height:1.3}",
     ".uu-ds li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:1px;background:var(--uu-ruou)}",
@@ -170,6 +183,7 @@
     "  .uu-the{left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));width:auto;max-width:none;padding:16px 18px 16px}",
     "  .uu-dau{margin-bottom:6px}",
     "  .uu-tit{font-size:1.32rem;margin-bottom:7px}",
+    "  .uu-ma{margin:0 0 8px}",
     "  .uu-the .uu-ds{display:none}",
     "  .uu-gon{display:block;margin:0 0 12px;font-size:.76rem;line-height:1.35}",
     "  .uu-gon b{font-weight:500}",
@@ -196,7 +210,7 @@
   the.setAttribute("role", "dialog"); the.setAttribute("aria-live", "polite");
   the.innerHTML =
     '<div class="uu-dau"><span class="uu-eb"></span><button type="button" class="uu-x">&times;</button></div>' +
-    '<p class="uu-tit"></p><p class="uu-gon"></p>' +
+    '<p class="uu-tit"></p><p class="uu-ma"><small></small><b></b></p><p class="uu-gon"></p>' +
     '<ul class="uu-ds"><li><b class="uu-y1"></b><i class="uu-y1p"></i></li><li><b class="uu-y2"></b><i class="uu-y2p"></i></li></ul>' +
     '<div class="uu-hang"><div class="uu-dem"><small></small><span></span></div>' +
     '<button type="button" class="uu-nut uu-mo-dat"><span></span></button></div>';
@@ -242,6 +256,7 @@
     var k = c();
     ghi(q(".uu-eb"), k.nhan); q(".uu-tit").innerHTML = k.tit; q(".uu-gon").innerHTML = k.gon;
     ghi(q(".uu-y1"), k.y1); ghi(q(".uu-y1p"), k.y1p); ghi(q(".uu-y2"), k.y2); ghi(q(".uu-y2p"), k.y2p);
+    ghi(q(".uu-ma small"), k.ma); ghi(q(".uu-ma b"), MA_KH);
     ghi(q(".uu-dem small"), k.con); ghi(q(".uu-mo-dat span"), k.nut);
     q(".uu-x").setAttribute("aria-label", k.dong); the.setAttribute("aria-label", k.the);
     ghi(nhan.querySelector(".uu-nhan-chu"), k.the);
@@ -262,12 +277,14 @@
   function hai(n){ return (n < 10 ? "0" : "") + n; }
   function conLai(){
     var s = Math.max(0, Math.floor((HET - Date.now()) / 1000));
-    return hai(Math.floor(s / 3600)) + ":" + hai(Math.floor(s / 60) % 60) + ":" + hai(s % 60);
+    var n = Math.floor(s / 86400), g = hai(Math.floor(s / 3600) % 24) + ":" + hai(Math.floor(s / 60) % 60) + ":" + hai(s % 60);
+    return n ? n + c().ngay + g : g;
   }
   function hanVN(){
     try{ return new Intl.DateTimeFormat("en-GB", { timeZone:"Asia/Ho_Chi_Minh", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", hour12:false }).format(new Date(HET)) + " Vietnam time"; }
     catch(_){ return new Date(HET).toUTCString(); }
   }
+  function dongMa(){ return MA + " · code " + MA_KH + " (valid until " + hanVN() + ")"; }  /* dòng ưu đãi trong tin WhatsApp */
   function tien(n){ return "US$" + Math.round(n).toLocaleString("en-US"); }
   function ngayDep(v, vn){  /* "2027-03-20" → "20 Mar 2027" (tin khách) / "20/03/2027" (mail chị) */
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || ""); if(!m) return v || "";
@@ -322,7 +339,7 @@
   function veB2(){
     var k = c(), t = tinh(), tt = thongTin(), h = "";
     t.ds.forEach(function(x){ h += '<div><span>' + x.ms + '</span><span>' + (x.gia ? tien(x.gia) : k.hoiGia) + '</span></div>'; });
-    h += '<div class="tru"><span>' + k.uuDai + '</span><span>−' + tien(GIAM) + '</span></div>';
+    h += '<div class="tru"><span>' + k.uuDai + ' · ' + MA_KH + '</span><span>−' + tien(GIAM) + '</span></div>';
     if(t.du) h += '<div class="tong"><span>' + k.tong + '</span><span>' + tien(t.sau) + '</span></div>' +
                   '<div class="coc"><span>' + k.coc + '</span><span>' + tien(t.coc) + '</span></div>';
     else h += '<div class="tong coc"><span>' + k.coc + '</span><span>' + k.cocHoi + '</span></div>';
@@ -337,8 +354,8 @@
   }
   function tinGui(){
     var t = tinh(), tt = thongTin(), L = [];
-    if(t.du) L.push("Hi Dolinhanh Bridal, I have transferred my 30% deposit with the offer " + MA + " (valid until " + hanVN() + ").");
-    else L.push("Hi Dolinhanh Bridal, I'd like to book with the offer " + MA + " (valid until " + hanVN() + ").");
+    if(t.du) L.push("Hi Dolinhanh Bridal, I have transferred my 30% deposit with the offer " + dongMa() + ".");
+    else L.push("Hi Dolinhanh Bridal, I'd like to book with the offer " + dongMa() + ".");
     L.push("Gown: " + t.ds.map(function(x){ return x.ms + (x.gia ? " (" + tien(x.gia) + ")" : ""); }).join(", "));
     if(t.du){ L.push("Total after US$100 off: " + tien(t.sau)); L.push("Deposit paid (30%): " + tien(t.coc)); }
     else L.push("Please confirm the price and my 30% deposit.");
@@ -354,11 +371,12 @@
   var daBao = "";
   function baoChi(){  /* mail báo chị Linh — cùng máy gửi mail của form đặt lịch */
     var t = tinh(), tt = thongTin();
-    var tin = "ĐẶT VÁY ƯU ĐÃI US$100 · 24H (vietnamweddinggown.com)\n"
+    var tin = "ĐẶT VÁY ƯU ĐÃI US$100 · 7 NGÀY (vietnamweddinggown.com)\n"
+      + "Mã khách: " + MA_KH + "\n"
       + "Váy: " + t.ds.map(function(x){ return x.ms + (x.gia ? " (" + tien(x.gia) + ")" : " (chưa có giá)"); }).join(", ") + "\n"
       + (t.du ? "Sau giảm: " + tien(t.sau) + " · Cọc 30%: " + tien(t.coc) + "\n" : "Cọc 30%: nhân viên báo khách\n")
       + "Tên: " + tt.ten + "\nWhatsApp: " + tt.wa + "\nEmail: " + (tt.em || "-") + "\nNgày cưới: " + (ngayDep(tt.ngay, 1) || "-") + "\nQuốc gia: " + (tt.nuoc || "-") + "\n"
-      + "Hạn ưu đãi: " + hanVN().replace(" Vietnam time", " (giờ VN)") + "\n"
+      + "Hạn ưu đãi: " + hanVN().replace(" Vietnam time", " (giờ VN)") + " · vào web lần đầu " + new Date(t0).toLocaleString("vi-VN", { timeZone:"Asia/Ho_Chi_Minh" }) + "\n"
       + "(Khách vừa điền form trên web — chờ khách nhắn WhatsApp + gửi biên lai)";
     if(tin === daBao) return; daBao = tin;
     try{ fetch(MAIL_URL + "?hoi=" + encodeURIComponent(tin) + "&em=" + encodeURIComponent(tt.em || tt.wa), { mode:"no-cors" }).catch(function(){}); }catch(_){}
@@ -403,7 +421,7 @@
     });
     var loi = d(".uu-loi"); loi.hidden = ok; if(!ok){ loi.textContent = c().thieu; return; }
     veB2(); buoc(2); baoChi();
-    try{ if(typeof fbq === "function") fbq("track", "Lead", { content_name:"Offer US$100 24H" }); }catch(_){}
+    try{ if(typeof fbq === "function") fbq("track", "Lead", { content_name:"Offer US$100 7D" }); }catch(_){}
   });
   d(".uu-sua").addEventListener("click", function(){ buoc(1); });
   nen.querySelectorAll(".uu-chep").forEach(function(b){
@@ -434,7 +452,7 @@
     try{
       var u = new URL(a.href), tin = u.searchParams.get("text") || "Hi Dolinhanh Bridal,";
       if(tin.indexOf(MA) > -1) return;
-      a.href = u.origin + u.pathname + "?text=" + encodeURIComponent(tin + "\nOffer: " + MA + " (valid until " + hanVN() + ")");
+      a.href = u.origin + u.pathname + "?text=" + encodeURIComponent(tin + "\nOffer: " + dongMa());
     }catch(_){}
   }
   document.addEventListener("click", kemMa, true);
