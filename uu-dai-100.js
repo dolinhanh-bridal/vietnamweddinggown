@@ -4,6 +4,7 @@
    - Mỗi khách 1 MÃ RIÊNG (DLA100-XXXX, lưu localStorage) — kèm trong mọi tin WhatsApp + mail báo chị → nhân viên phân biệt được từng khách.
    - Chị chốt 28/10 "bắt điền ws": thẻ CHƯA hiện mã, khách điền SỐ WHATSAPP → hiện mã + nút Book now, mail báo chị (tiêu đề có "MÃ US$100 · <mã> · WA <số>").
      Khách điền form đặt váy (cũng bắt WhatsApp) mà chưa nhận mã → coi như đã nhận (mail đặt váy có sẵn mã).
+   - Nhận mã xong có nút "Send my code on WhatsApp" (chị 28/10 "về ws luôn") → khách bấm gửi là tin có mã vào thẳng WhatsApp DLA.
    - Không phủ đen, trang vẫn cuộn được.
      Máy tính: hiện sau 7 giây / cuộn 500px · thẻ góc phải, trên nút WhatsApp nổi (góc trái là chữ bìa trang chủ).
      Điện thoại: hiện sau 10 giây / cuộn nửa màn hình · thẻ gọn dưới đáy (2 ý gộp 1 dòng).
@@ -51,7 +52,7 @@
          y1:"Book within 7 days", y1p:"30% deposit by bank transfer",
          y2:"Ready-to-wear gowns", y2p:"not for made-to-measure",
          gon:"<b>30% deposit within 7 days</b> · <i>ready-to-wear only</i>",
-         con:"Ends in", ngay:"d ", ma:"Your code", nut:"Book now", khoaL:"Your WhatsApp number to get the code", khoaNut:"Get my code", khoaLoi:"Please enter your WhatsApp number with country code.", the:"US$100 off", dong:"Close",
+         con:"Ends in", ngay:"d ", ma:"Your code", nut:"Book now", khoaL:"Your WhatsApp number to get the code", khoaNut:"Get my code", khoaLoi:"Please enter your WhatsApp number with country code.", waMa:"Send my code on WhatsApp", the:"US$100 off", dong:"Close",
          dEb:"US$100 off · ends in", dTit:"Book your gown", b1:"Your details", b2:"Deposit",
          fMs:"Gown code *", fMsPh:"e.g. MS 23", fTen:"Your name *", fWa:"WhatsApp number *", fWaPh:"+1 555 123 4567",
          fEm:"Email", fNgay:"Wedding date", fNuoc:"Country", fNuocPh:"e.g. Australia",
@@ -70,7 +71,7 @@
          y1:"Đặt váy trong 7 ngày", y1p:"cọc 30% qua chuyển khoản",
          y2:"Váy có sẵn", y2p:"không áp dụng may đo",
          gon:"<b>Cọc 30% trong 7 ngày</b> · <i>chỉ váy có sẵn</i>",
-         con:"Còn", ngay:" ngày ", ma:"Mã của bạn", nut:"Đặt váy ngay", khoaL:"Nhập số WhatsApp để nhận mã", khoaNut:"Nhận mã", khoaLoi:"Vui lòng nhập số WhatsApp kèm mã quốc gia.", the:"Giảm US$100", dong:"Đóng",
+         con:"Còn", ngay:" ngày ", ma:"Mã của bạn", nut:"Đặt váy ngay", khoaL:"Nhập số WhatsApp để nhận mã", khoaNut:"Nhận mã", khoaLoi:"Vui lòng nhập số WhatsApp kèm mã quốc gia.", waMa:"Gửi mã qua WhatsApp", the:"Giảm US$100", dong:"Đóng",
          dEb:"Giảm US$100 · còn", dTit:"Đặt váy", b1:"Thông tin", b2:"Đặt cọc",
          fMs:"Mã váy *", fMsPh:"VD: MS 23", fTen:"Họ tên *", fWa:"Số WhatsApp *", fWaPh:"+84 912 345 678",
          fEm:"Email", fNgay:"Ngày cưới", fNuoc:"Quốc gia", fNuocPh:"VD: Úc",
@@ -89,7 +90,7 @@
          y1:"7 天内预订", y1p:"银行转账支付 30% 定金",
          y2:"现货婚纱", y2p:"定制婚纱不适用",
          gon:"<b>7 天内付 30% 定金</b> · <i>仅限现货婚纱</i>",
-         con:"剩余", ngay:" 天 ", ma:"您的优惠码", nut:"立即预订", khoaL:"输入 WhatsApp 号码领取优惠码", khoaNut:"领取优惠码", khoaLoi:"请输入带国家区号的 WhatsApp 号码。", the:"立减 US$100", dong:"关闭",
+         con:"剩余", ngay:" 天 ", ma:"您的优惠码", nut:"立即预订", khoaL:"输入 WhatsApp 号码领取优惠码", khoaNut:"领取优惠码", khoaLoi:"请输入带国家区号的 WhatsApp 号码。", waMa:"通过 WhatsApp 发送优惠码", the:"立减 US$100", dong:"关闭",
          dEb:"立减 US$100 · 剩余", dTit:"预订婚纱", b1:"您的信息", b2:"定金",
          fMs:"婚纱编号 *", fMsPh:"例如 MS 23", fTen:"姓名 *", fWa:"WhatsApp 号码 *", fWaPh:"+86 138 0000 0000",
          fEm:"邮箱", fNgay:"婚礼日期", fNuoc:"国家", fNuocPh:"例如 澳大利亚",
@@ -145,6 +146,10 @@
     "  font-family:inherit;font-size:.64rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;text-align:center;line-height:1.35;transition:background .2s}",
     ".uu-nut:hover{background:#611E2D;color:#fff;opacity:1}",
     ".uu-nut svg{flex:none}",
+    ".uu-wa-ma{display:flex;align-items:center;justify-content:center;gap:9px;box-sizing:border-box;margin:10px 0 0;padding:11px 14px;border:1px solid var(--uu-ruou);color:var(--uu-ruou);text-decoration:none;",
+    "  font-size:.64rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;line-height:1.35;transition:background .2s,color .2s}",
+    ".uu-wa-ma:hover{background:var(--uu-ruou);color:#fff;opacity:1}",
+    ".uu-wa-ma svg{flex:none}",
     ".uu-nhan{display:inline-flex;align-items:center;gap:9px;height:48px;box-sizing:border-box;padding:0 16px 0 14px;border:1px solid var(--uu-vien);border-radius:999px;background:var(--ivory,#FBF9F6);",
     "  box-shadow:0 10px 26px rgba(27,25,23,.16);cursor:pointer;font-size:.62rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}",
     ".uu-nhan svg{flex:none;color:var(--uu-ruou)}",
@@ -200,6 +205,7 @@
     "  .uu-gon i{font-family:" + SERIF + ";font-size:.84rem;color:var(--uu-nau)}",
     "  .uu-dem{min-width:96px;padding:6px 10px}",
     "  .uu-nut{padding:11px 10px;letter-spacing:.14em}",
+    "  .uu-wa-ma{margin-top:8px;padding:10px;letter-spacing:.14em}",
     "  .uu-nhan{right:12px;bottom:calc(86px + env(safe-area-inset-bottom))}",
     "  .uu-nen{align-items:flex-end;padding:0}",
     "  .uu-dat{width:100%;max-height:94vh;max-height:94dvh;padding:24px 20px calc(22px + env(safe-area-inset-bottom))}",
@@ -224,7 +230,8 @@
     '<ul class="uu-ds"><li><b class="uu-y1"></b><i class="uu-y1p"></i></li><li><b class="uu-y2"></b><i class="uu-y2p"></i></li></ul>' +
     '<form class="uu-khoa" novalidate><label for="uu-lh"></label><input id="uu-lh" name="wa" type="tel" inputmode="tel" autocomplete="tel"><p hidden></p></form>' +
     '<div class="uu-hang"><div class="uu-dem"><small></small><span></span></div>' +
-    '<button type="button" class="uu-nut uu-mo-dat"><span></span></button></div>';
+    '<button type="button" class="uu-nut uu-mo-dat"><span></span></button></div>' +
+    '<a class="uu-wa-ma" target="_blank" rel="noopener" hidden>' + ICON_WA + '<span></span></a>';
   var nhan = document.createElement("button");
   nhan.type = "button"; nhan.className = "uu-nhan"; nhan.hidden = true;
   nhan.innerHTML = ICON_TAG + '<span class="uu-nhan-chu"></span><span class="uu-nhan-gio"></span>';
@@ -398,8 +405,13 @@
   /* ── mở khoá mã: khách điền số WhatsApp (chị 28/10 "bắt điền ws") ── */
   function khoa(){  /* chưa có số: ô WhatsApp + nút "Get my code" · có số: hiện mã + nút "Book now" */
     var mo = !!WA_KH;
-    q(".uu-ma").hidden = !mo; q(".uu-khoa").hidden = mo;
+    q(".uu-ma").hidden = !mo; q(".uu-khoa").hidden = mo; q(".uu-wa-ma").hidden = !mo;
+    ghi(q(".uu-wa-ma span"), c().waMa); if(mo) q(".uu-wa-ma").href = linkMa();
     ghi(q(".uu-mo-dat span"), mo ? c().nut : c().khoaNut);
+  }
+  function linkMa(){  /* khách gửi mã vào WhatsApp DLA — kèm mã váy trong giỏ nếu có */
+    var gh = gioHang().map(function(x){ return x.ms; }).join(", ");
+    return "https://wa.me/" + WA + "?text=" + encodeURIComponent("Hi Dolinhanh Bridal, I just got the offer " + dongMa() + "." + (gh ? "\nGowns I like: " + gh : ""));
   }
   function nhanMa(){
     var o = q("#uu-lh"), v = o.value.trim(), so = (v.match(/\d/g) || []).length, ok = so >= 8 && so <= 15;
@@ -523,6 +535,11 @@
   q(".uu-x").addEventListener("click", thu);
   q(".uu-mo-dat").addEventListener("click", function(){ if(WA_KH) moKhung(); else nhanMa(); });
   q(".uu-khoa").addEventListener("submit", function(e){ e.preventDefault(); nhanMa(); });
+  var waMa = q(".uu-wa-ma");
+  function capNhatWaMa(){ if(WA_KH) waMa.href = linkMa(); }
+  waMa.addEventListener("mouseenter", capNhatWaMa); waMa.addEventListener("focus", capNhatWaMa);
+  waMa.addEventListener("touchstart", capNhatWaMa, { passive:true });
+  waMa.addEventListener("click", function(){ capNhatWaMa(); try{ if(typeof fbq === "function") fbq("trackCustom", "Offer100SendCode"); }catch(_){} });
   nhan.addEventListener("click", mo);
   window.uu100 = { datVay:moKhung };  /* nút khác trên trang muốn mở khung đặt váy: uu100.datVay() */
 
