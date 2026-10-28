@@ -1,7 +1,9 @@
 /* Ưu đãi US$100 · 7 ngày — CHỈ web riêng vietnamweddinggown.com (chị Linh 17/10/2026; 28/10 đổi 24 giờ → 7 ngày)
    - Giảm US$100 khi ĐẶT CỌC 30% váy CÓ SẴN trong 7 ngày (không áp dụng may đo). Cọc = 30% × (giá váy − US$100).
    - 7 ngày đếm từ lần đầu khách vào web (localStorage), hết hạn thì không hiện nữa.
-   - Mỗi khách 1 MÃ RIÊNG (DLA100-XXXX, lưu localStorage) — hiện trên thẻ, kèm trong mọi tin WhatsApp + mail báo chị → nhân viên phân biệt được từng khách.
+   - Mỗi khách 1 MÃ RIÊNG (DLA100-XXXX, lưu localStorage) — kèm trong mọi tin WhatsApp + mail báo chị → nhân viên phân biệt được từng khách.
+   - Chị chốt 28/10 "bắt điền ws": thẻ CHƯA hiện mã, khách điền SỐ WHATSAPP → hiện mã + nút Book now, mail báo chị (tiêu đề có "MÃ US$100 · <mã> · WA <số>").
+     Khách điền form đặt váy (cũng bắt WhatsApp) mà chưa nhận mã → coi như đã nhận (mail đặt váy có sẵn mã).
    - Không phủ đen, trang vẫn cuộn được.
      Máy tính: hiện sau 7 giây / cuộn 500px · thẻ góc phải, trên nút WhatsApp nổi (góc trái là chữ bìa trang chủ).
      Điện thoại: hiện sau 10 giây / cuộn nửa màn hình · thẻ gọn dưới đáy (2 ý gộp 1 dòng).
@@ -20,14 +22,14 @@
   if(window.__uu100) return; window.__uu100 = 1;
 
   /* 28/10: khoá localStorage mới → mọi khách (cả khách đã hết 24 giờ cũ) được 7 ngày tính lại từ lần vào tới */
-  var HAN = 7 * 864e5, GIAM = 100, COC = 0.3, K_T0 = "vwg-uu7n-t0", K_DONG = "vwg-uu7n-dong", K_MA = "vwg-uu7n-ma";
+  var HAN = 7 * 864e5, GIAM = 100, COC = 0.3, K_T0 = "vwg-uu7n-t0", K_DONG = "vwg-uu7n-dong", K_MA = "vwg-uu7n-ma", K_WA = "vwg-uu7n-wa";
   var WA = "84359950588", MA = "US$100 OFF – 7 DAYS";
   var MAIL_URL = "https://script.google.com/macros/s/AKfycbwlmpyoY3b-iCmO9ZoVeUhm0wYJb4CrQ6I9ezsadk4UhDx1JS3qAEN7MWNOL_DGgkiV/exec";
   var TK = [["ten", "DO XUAN CUONG"], ["so", "2288888"], ["nh", "ACB – Asia Commercial Bank"], ["swift", "ASCBVNVX"]];
   function lay(k){ try{ return localStorage.getItem(k); }catch(_){ return null; } }
   function dat(k, v){ try{ localStorage.setItem(k, v); }catch(_){} }
   function bo(k){ try{ localStorage.removeItem(k); }catch(_){} }
-  try{ if(new URLSearchParams(location.search).get("uudai") === "0"){ bo(K_T0); bo(K_DONG); bo(K_MA); } }catch(_){}
+  try{ if(new URLSearchParams(location.search).get("uudai") === "0"){ bo(K_T0); bo(K_DONG); bo(K_MA); bo(K_WA); } }catch(_){}
 
   var t0 = +lay(K_T0) || 0, bay = Date.now();
   if(!t0 || t0 > bay){ t0 = bay; dat(K_T0, String(t0)); }
@@ -42,13 +44,14 @@
     for(var i = 0; i < 4; i++) MA_KH += BC[(r ? r[i] : Math.random() * 256) & 31];
     dat(K_MA, MA_KH);
   }
+  var WA_KH = lay(K_WA) || "";  /* số WhatsApp khách đã điền → có số mới hiện mã */
 
   var CHU = {
     en:{ nhan:"7-day offer", tit:"<em>US$100</em> off your gown",
          y1:"Book within 7 days", y1p:"30% deposit by bank transfer",
          y2:"Ready-to-wear gowns", y2p:"not for made-to-measure",
          gon:"<b>30% deposit within 7 days</b> · <i>ready-to-wear only</i>",
-         con:"Ends in", ngay:"d ", ma:"Your code", nut:"Book now", the:"US$100 off", dong:"Close",
+         con:"Ends in", ngay:"d ", ma:"Your code", nut:"Book now", khoaL:"Your WhatsApp number to get the code", khoaNut:"Get my code", khoaLoi:"Please enter your WhatsApp number with country code.", the:"US$100 off", dong:"Close",
          dEb:"US$100 off · ends in", dTit:"Book your gown", b1:"Your details", b2:"Deposit",
          fMs:"Gown code *", fMsPh:"e.g. MS 23", fTen:"Your name *", fWa:"WhatsApp number *", fWaPh:"+1 555 123 4567",
          fEm:"Email", fNgay:"Wedding date", fNuoc:"Country", fNuocPh:"e.g. Australia",
@@ -67,7 +70,7 @@
          y1:"Đặt váy trong 7 ngày", y1p:"cọc 30% qua chuyển khoản",
          y2:"Váy có sẵn", y2p:"không áp dụng may đo",
          gon:"<b>Cọc 30% trong 7 ngày</b> · <i>chỉ váy có sẵn</i>",
-         con:"Còn", ngay:" ngày ", ma:"Mã của bạn", nut:"Đặt váy ngay", the:"Giảm US$100", dong:"Đóng",
+         con:"Còn", ngay:" ngày ", ma:"Mã của bạn", nut:"Đặt váy ngay", khoaL:"Nhập số WhatsApp để nhận mã", khoaNut:"Nhận mã", khoaLoi:"Vui lòng nhập số WhatsApp kèm mã quốc gia.", the:"Giảm US$100", dong:"Đóng",
          dEb:"Giảm US$100 · còn", dTit:"Đặt váy", b1:"Thông tin", b2:"Đặt cọc",
          fMs:"Mã váy *", fMsPh:"VD: MS 23", fTen:"Họ tên *", fWa:"Số WhatsApp *", fWaPh:"+84 912 345 678",
          fEm:"Email", fNgay:"Ngày cưới", fNuoc:"Quốc gia", fNuocPh:"VD: Úc",
@@ -86,7 +89,7 @@
          y1:"7 天内预订", y1p:"银行转账支付 30% 定金",
          y2:"现货婚纱", y2p:"定制婚纱不适用",
          gon:"<b>7 天内付 30% 定金</b> · <i>仅限现货婚纱</i>",
-         con:"剩余", ngay:" 天 ", ma:"您的优惠码", nut:"立即预订", the:"立减 US$100", dong:"关闭",
+         con:"剩余", ngay:" 天 ", ma:"您的优惠码", nut:"立即预订", khoaL:"输入 WhatsApp 号码领取优惠码", khoaNut:"领取优惠码", khoaLoi:"请输入带国家区号的 WhatsApp 号码。", the:"立减 US$100", dong:"关闭",
          dEb:"立减 US$100 · 剩余", dTit:"预订婚纱", b1:"您的信息", b2:"定金",
          fMs:"婚纱编号 *", fMsPh:"例如 MS 23", fTen:"姓名 *", fWa:"WhatsApp 号码 *", fWaPh:"+86 138 0000 0000",
          fEm:"邮箱", fNgay:"婚礼日期", fNuoc:"国家", fNuocPh:"例如 澳大利亚",
@@ -113,7 +116,7 @@
     ".uu-the{width:372px;max-width:calc(100vw - 24px);box-sizing:border-box;padding:22px 24px 20px;background:var(--ivory,#FBF9F6);border:1px solid var(--uu-vien);box-shadow:0 18px 46px rgba(27,25,23,.2);",
     "  opacity:0;transform:translateY(18px);transition:opacity .35s ease,transform .35s ease}",
     ".uu-the.hien{opacity:1;transform:none}",
-    ".uu-the[hidden],.uu-nhan[hidden],.uu-nen[hidden],.uu-dat [hidden]{display:none!important}",
+    ".uu-the[hidden],.uu-nhan[hidden],.uu-nen[hidden],.uu-dat [hidden],.uu-the [hidden]{display:none!important}",
     ".uu-dau{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 8px}",
     ".uu-eb{font-size:.6rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--uu-nau)}",
     ".uu-x{flex:none;display:grid;place-items:center;width:34px;height:34px;margin:-10px -12px -10px 0;padding:0;border:0;background:none;color:var(--uu-nau);cursor:pointer;font-size:22px;line-height:1}",
@@ -121,6 +124,12 @@
     ".uu-tit{margin:0 0 14px;font-family:" + SERIF + ";font-weight:400;font-size:1.62rem;line-height:1.15;letter-spacing:-.005em}",
     ".uu-tit em{font-style:italic;color:var(--uu-ruou)}",
     ".uu-ma{display:flex;align-items:baseline;gap:10px;margin:-4px 0 14px;font-size:.58rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--uu-nau)}",
+    ".uu-khoa{margin:0 0 14px}",
+    ".uu-khoa label{display:block;margin:0 0 2px;font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--uu-nau)}",
+    ".uu-khoa input{width:100%;box-sizing:border-box;font-family:inherit;font-weight:300;font-size:16px;color:var(--uu-ink);background:transparent;border:0;border-bottom:1px solid var(--uu-vien);border-radius:0;padding:8px 0;margin:0;-webkit-appearance:none;appearance:none}",
+    ".uu-khoa input:focus{outline:none;border-bottom-color:var(--uu-ink)}",
+    ".uu-khoa.loi input{border-bottom-color:var(--uu-ruou)}",
+    ".uu-khoa p{margin:6px 0 0;font-size:.72rem;color:var(--uu-ruou)}",
     ".uu-ma b{padding:3px 9px;border:1px dashed var(--uu-ruou);font-size:.72rem;font-weight:600;letter-spacing:.14em;color:var(--uu-ruou)}",
     ".uu-ds{list-style:none;margin:0 0 16px;padding:12px 0 0;border-top:1px solid var(--uu-vien);display:grid;gap:9px}",
     ".uu-ds li{position:relative;padding-left:16px;line-height:1.3}",
@@ -184,6 +193,7 @@
     "  .uu-dau{margin-bottom:6px}",
     "  .uu-tit{font-size:1.32rem;margin-bottom:7px}",
     "  .uu-ma{margin:0 0 8px}",
+    "  .uu-khoa{margin:0 0 10px}",
     "  .uu-the .uu-ds{display:none}",
     "  .uu-gon{display:block;margin:0 0 12px;font-size:.76rem;line-height:1.35}",
     "  .uu-gon b{font-weight:500}",
@@ -212,6 +222,7 @@
     '<div class="uu-dau"><span class="uu-eb"></span><button type="button" class="uu-x">&times;</button></div>' +
     '<p class="uu-tit"></p><p class="uu-ma"><small></small><b></b></p><p class="uu-gon"></p>' +
     '<ul class="uu-ds"><li><b class="uu-y1"></b><i class="uu-y1p"></i></li><li><b class="uu-y2"></b><i class="uu-y2p"></i></li></ul>' +
+    '<form class="uu-khoa" novalidate><label for="uu-lh"></label><input id="uu-lh" name="wa" type="tel" inputmode="tel" autocomplete="tel"><p hidden></p></form>' +
     '<div class="uu-hang"><div class="uu-dem"><small></small><span></span></div>' +
     '<button type="button" class="uu-nut uu-mo-dat"><span></span></button></div>';
   var nhan = document.createElement("button");
@@ -257,7 +268,8 @@
     ghi(q(".uu-eb"), k.nhan); q(".uu-tit").innerHTML = k.tit; q(".uu-gon").innerHTML = k.gon;
     ghi(q(".uu-y1"), k.y1); ghi(q(".uu-y1p"), k.y1p); ghi(q(".uu-y2"), k.y2); ghi(q(".uu-y2p"), k.y2p);
     ghi(q(".uu-ma small"), k.ma); ghi(q(".uu-ma b"), MA_KH);
-    ghi(q(".uu-dem small"), k.con); ghi(q(".uu-mo-dat span"), k.nut);
+    ghi(q(".uu-dem small"), k.con); khoa();
+    ghi(q(".uu-khoa label"), k.khoaL); q("#uu-lh").placeholder = k.fWaPh; if(!q(".uu-khoa p").hidden) ghi(q(".uu-khoa p"), k.khoaLoi);
     q(".uu-x").setAttribute("aria-label", k.dong); the.setAttribute("aria-label", k.the);
     ghi(nhan.querySelector(".uu-nhan-chu"), k.the);
     ghi(d(".uu-deb"), k.dEb); ghi(d(".uu-dtit"), k.dTit); d(".uu-dat").setAttribute("aria-label", k.dTit); d(".uu-x").setAttribute("aria-label", k.dong);
@@ -284,6 +296,7 @@
     try{ return new Intl.DateTimeFormat("en-GB", { timeZone:"Asia/Ho_Chi_Minh", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", hour12:false }).format(new Date(HET)) + " Vietnam time"; }
     catch(_){ return new Date(HET).toUTCString(); }
   }
+  function vaoLanDau(){ try{ return new Date(t0).toLocaleString("vi-VN", { timeZone:"Asia/Ho_Chi_Minh" }); }catch(_){ return new Date(t0).toISOString(); } }
   function dongMa(){ return MA + " · code " + MA_KH + " (valid until " + hanVN() + ")"; }  /* dòng ưu đãi trong tin WhatsApp */
   function tien(n){ return "US$" + Math.round(n).toLocaleString("en-US"); }
   function ngayDep(v, vn){  /* "2027-03-20" → "20 Mar 2027" (tin khách) / "20/03/2027" (mail chị) */
@@ -376,10 +389,39 @@
       + "Váy: " + t.ds.map(function(x){ return x.ms + (x.gia ? " (" + tien(x.gia) + ")" : " (chưa có giá)"); }).join(", ") + "\n"
       + (t.du ? "Sau giảm: " + tien(t.sau) + " · Cọc 30%: " + tien(t.coc) + "\n" : "Cọc 30%: nhân viên báo khách\n")
       + "Tên: " + tt.ten + "\nWhatsApp: " + tt.wa + "\nEmail: " + (tt.em || "-") + "\nNgày cưới: " + (ngayDep(tt.ngay, 1) || "-") + "\nQuốc gia: " + (tt.nuoc || "-") + "\n"
-      + "Hạn ưu đãi: " + hanVN().replace(" Vietnam time", " (giờ VN)") + " · vào web lần đầu " + new Date(t0).toLocaleString("vi-VN", { timeZone:"Asia/Ho_Chi_Minh" }) + "\n"
+      + "Hạn ưu đãi: " + hanVN().replace(" Vietnam time", " (giờ VN)") + " · vào web lần đầu " + vaoLanDau() + "\n"
       + "(Khách vừa điền form trên web — chờ khách nhắn WhatsApp + gửi biên lai)";
     if(tin === daBao) return; daBao = tin;
     try{ fetch(MAIL_URL + "?hoi=" + encodeURIComponent(tin) + "&em=" + encodeURIComponent(tt.em || tt.wa), { mode:"no-cors" }).catch(function(){}); }catch(_){}
+  }
+
+  /* ── mở khoá mã: khách điền số WhatsApp (chị 28/10 "bắt điền ws") ── */
+  function khoa(){  /* chưa có số: ô WhatsApp + nút "Get my code" · có số: hiện mã + nút "Book now" */
+    var mo = !!WA_KH;
+    q(".uu-ma").hidden = !mo; q(".uu-khoa").hidden = mo;
+    ghi(q(".uu-mo-dat span"), mo ? c().nut : c().khoaNut);
+  }
+  function nhanMa(){
+    var o = q("#uu-lh"), v = o.value.trim(), so = (v.match(/\d/g) || []).length, ok = so >= 8 && so <= 15;
+    q(".uu-khoa").classList.toggle("loi", !ok); q(".uu-khoa p").hidden = ok;
+    if(!ok){ ghi(q(".uu-khoa p"), c().khoaLoi); try{ o.focus(); }catch(_){} return; }
+    moKhoa(v); baoMa();
+    try{ if(typeof fbq === "function") fbq("trackCustom", "Offer100Code"); }catch(_){}
+  }
+  function moKhoa(wa){
+    WA_KH = wa; dat(K_WA, wa);
+    if(!d("#uu-wa").value) d("#uu-wa").value = wa;
+    khoa();
+  }
+  function baoMa(){  /* mail báo chị: dòng đầu = tiêu đề mail → tìm "MÃ US$100" trong hộp thư ra danh sách khách */
+    var gh = gioHang().map(function(x){ return x.ms; }).join(", ");
+    var tin = "MÃ US$100 · " + MA_KH + " · WA " + WA_KH + "\n\n"
+      + "KHÁCH NHẬN MÃ ƯU ĐÃI US$100 · 7 NGÀY (vietnamweddinggown.com)\n"
+      + "Mã khách: " + MA_KH + "\nWhatsApp: " + WA_KH + "\n"
+      + "Hạn ưu đãi: " + hanVN().replace(" Vietnam time", " (giờ VN)") + " · vào web lần đầu " + vaoLanDau() + "\n"
+      + "Đang xem: " + location.pathname + " · tiếng " + ngu().toUpperCase() + (gh ? "\nGiỏ hàng: " + gh : "") + "\n"
+      + "(Khách mới nhận mã, chưa đặt váy)";
+    try{ fetch(MAIL_URL + "?hoi=" + encodeURIComponent(tin) + "&em=" + encodeURIComponent(WA_KH), { mode:"no-cors" }).catch(function(){}); }catch(_){}
   }
 
   /* ── mở / đóng khung đặt váy (nút Back điện thoại cũng đóng) ── */
@@ -420,6 +462,7 @@
       var o = d(x[0]).parentNode; o.classList.toggle("loi", !x[1]); if(!x[1]) ok = false;
     });
     var loi = d(".uu-loi"); loi.hidden = ok; if(!ok){ loi.textContent = c().thieu; return; }
+    if(!WA_KH) moKhoa(tt.wa);
     veB2(); buoc(2); baoChi();
     try{ if(typeof fbq === "function") fbq("track", "Lead", { content_name:"Offer US$100 7D" }); }catch(_){}
   });
@@ -446,7 +489,7 @@
 
   /* mọi link WhatsApp khác trên trang: còn hạn thì thêm dòng mã ưu đãi vào tin soạn sẵn (bấm lúc nào sửa lúc đó) */
   function kemMa(e){
-    if(Date.now() >= HET) return;
+    if(Date.now() >= HET || !WA_KH) return;
     var a = e.target && e.target.closest && e.target.closest('a[href*="wa.me/"]');
     if(!a || a === gui) return;
     try{
@@ -478,13 +521,14 @@
     setTimeout(function(){ the.hidden = true; if(Date.now() < HET) nhan.hidden = false; }, 260);
   }
   q(".uu-x").addEventListener("click", thu);
-  q(".uu-mo-dat").addEventListener("click", moKhung);
+  q(".uu-mo-dat").addEventListener("click", function(){ if(WA_KH) moKhung(); else nhanMa(); });
+  q(".uu-khoa").addEventListener("submit", function(e){ e.preventDefault(); nhanMa(); });
   nhan.addEventListener("click", mo);
   window.uu100 = { datVay:moKhung };  /* nút khác trên trang muốn mở khung đặt váy: uu100.datVay() */
 
   /* điện thoại: khách cuộn tiếp ~1 màn hình mà không bấm → thu về nhãn nhỏ cho khỏi che nội dung */
   addEventListener("scroll", function(){
-    if(the.hidden || moDat || !moLuc || Date.now() - moLuc < 1500) return;
+    if(the.hidden || moDat || !moLuc || Date.now() - moLuc < 1500 || the.contains(document.activeElement)) return;
     if(innerWidth <= 640 && Math.abs(scrollY - yMo) > innerHeight * 0.9) thu();
   }, { passive:true });
 
