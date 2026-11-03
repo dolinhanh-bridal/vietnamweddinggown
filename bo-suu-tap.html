@@ -10,6 +10,7 @@
 -->
 <meta charset="utf-8">
 <!-- Meta Pixel Code -->
+<script>window.VWG_SALE={"MS 57":440,"MS 58":440,"MS 111":440,"MS 113":440,"MS 114":440,"MS 115":440,"MS 116":440,"MS 117":440,"MS 123":440,"MS 126":440,"MS 129":440,"MS 153":440,"MS 154":440,"MS 208":440,"MS 231":440,"MS 233":440,"MS 234":440,"MS 235":440,"MS 236":440,"MS 238":440,"MS 239":440,"MS 240":440,"MS 241":440,"MS 242":440,"MS 243":440,"MS 244":440,"MS 255":440,"MS 256":440,"MS 259":440,"MS 263":440,"MS 264":440,"MS 266":440,"MS 292":440,"MS 295":440,"MS 302":440,"MS 308":440,"MS 315":440,"MS 326":440,"MS 337":440,"MS 350":440,"MS 353":440,"MS 569":440,"MS 395":440,"MS 398":440,"MS 399":440,"MS 400":440,"MS 401":440,"MS 402":440,"MS 403":440,"MS 404":440,"MS 405":440,"MS 406":440,"MS 457":440,"MS 458":440,"MS 464":440,"MS 465":440,"MS 471":440,"MS 475":440,"MS 480":440,"MS 481":440,"MS 483":440,"MS 487":440,"MS 489":440,"MS 522":440};try{var g=JSON.parse(localStorage.getItem("dla-gio")||"[]"),d=0;g.forEach(function(x){var v=x&&VWG_SALE[(x.ms||"").toUpperCase()];if(v&&x.gia!=="US$"+v){x.gia="US$"+v;d=1}});if(d)localStorage.setItem("dla-gio",JSON.stringify(g))}catch(_){}</script>
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -800,6 +801,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   }
   @media (max-width:560px){header nav .nav-voan{display:none}}
   #quatang,.pop-qua-xong,.hero-qua,p.pop-qua{display:none!important}
+
+  html.vwg .vl figure[data-sale]{position:relative}
+  .ss-nhan{display:none}
+  .ss-ghim{position:relative;height:0}  /* ghim tag vào đáy ảnh, ngay trên figcaption */
+  html.vwg .ss-nhan{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:absolute;left:6px;bottom:6px;z-index:3;width:54px;height:70px;padding-bottom:13px;box-sizing:border-box;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 130'%3E%3Ccircle cx='50' cy='88' r='38' fill='%23FBF7EF' stroke='%238B0F24' stroke-width='1.2'/%3E%3Ccircle cx='50' cy='60' r='5.4' fill='%23C9C2B5'/%3E%3Ccircle cx='50' cy='60' r='2.9' fill='%233a3430' fill-opacity='.55'/%3E%3Cpath d='M50 60 C54 44,76 46,72 30 C69 18,54 20,58 8' fill='none' stroke='%238B0F24' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M50 60 C45 46,68 40,65 26' fill='none' stroke='%238B0F24' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(1px 2px 2px rgba(0,0,0,.28));color:#8B0F24;text-align:center;line-height:1.05;pointer-events:none}
+  html.vwg .ss-nhan i{font-family:var(--serif);font-style:italic;font-size:9.5px}
+  html.vwg .ss-nhan b{margin-top:1px;font-family:var(--sans);font-weight:600;font-size:4.8px;letter-spacing:.2em;text-transform:uppercase}
+  @media (max-width:760px){ html.vwg .ss-nhan{left:4px;bottom:4px;width:46px;height:60px;padding-bottom:11px} html.vwg .ss-nhan i{font-size:8px} html.vwg .ss-nhan b{font-size:4.2px} }
+  html.co-gia.vwg .vl .gia[data-goc]{color:#6F2A3A}
+  html.co-gia.vwg .vl .gia[data-goc]::after{content:attr(data-goc);margin-left:7px;color:var(--taupe-deep,#6E665C);font-size:.8em;text-decoration:line-through;text-decoration-thickness:1px;opacity:.75}
+  .ss-bang{display:block;padding:clamp(30px,5vw,48px) var(--gutter,20px);background:#F6F2EC;border-block:1px solid rgba(110,102,92,.22);color:#1B1917!important;text-align:center;text-decoration:none}
+  .ss-bang .k{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#6E665C}
+  .ss-bang .t{display:block;margin-top:10px;font-family:var(--serif);font-weight:400;font-size:clamp(1.55rem,3.6vw,2.3rem);line-height:1.2}
+  .ss-bang .t em{font-style:italic;color:#6F2A3A}
+  .ss-bang .p{display:block;margin-top:10px;font-family:var(--sans);font-size:13px;line-height:1.6;color:#6E665C}
+  .ss-bang .n{display:inline-block;margin-top:16px;padding-bottom:3px;border-bottom:1px solid #1B1917;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase}
 </style>
 
 <script>document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('bst'));</script>
@@ -834,6 +851,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     </div>
   </section>
 
+<a class="ss-bang" href="bo-suu-tap.html?sale=1"><span class="k" data-en="Sample sale" data-zh="样品特卖">Sample sale</span><span class="t"><em data-en="50% off" data-zh="五折">Giảm 50%</em> <span data-en="sample gowns" data-zh="样品婚纱">váy hàng mẫu</span></span><span class="p" data-en="One piece each, until sold out · Final sale, no returns or exchanges" data-zh="每款仅 1 件，售完即止 · 不退不换">Mỗi mẫu 1 chiếc, bán đến hết · Không đổi trả</span><span class="n" data-en="See the gowns" data-zh="查看婚纱">Xem váy</span></a>
   <section id="bosuutap">
     <div class="wrap">
       <div class="vl-loc rise" id="vlLoc">
@@ -841,6 +859,11 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <div class="vl-tim">
           <label class="lb" for="vlTim" data-en="Dress code" data-zh="婚纱编号">Mã váy</label>
           <span class="o"><input id="vlTim" type="search" inputmode="numeric" autocomplete="off" placeholder="Nhập mã, ví dụ 23" data-ph-en="Enter code, e.g. 23" data-ph-zh="输入编号，如 23"><button type="button" class="xoa" id="vlTimXoa" aria-label="Xoá" hidden>×</button></span>
+        </div>
+        <div class="vl-nhom">
+          <span class="lb" data-en="Offer" data-zh="优惠">Ưu đãi</span>
+          <button type="button" data-loai="sale" data-v="" aria-current="true" data-en="All" data-zh="全部">Tất cả</button>
+          <button type="button" data-loai="sale" data-v="1" data-en="Sample sale −50%" data-zh="样品特卖 −50%">Sample sale −50%</button>
         </div>
         <div class="vl-nhom">
           <span class="lb" data-en="Silhouette" data-zh="廓形">Silhouette</span>
@@ -926,17 +949,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 56</span><span class="de" data-en="Fitted silk, sheer lace skirt" data-zh="修身真丝，透视蕾丝裙摆">Dáng ôm lụa, chân ren xuyên thấu</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms57/01.jpg?v=3"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 57</span><span class="de" data-en="Draped satin, high slit" data-zh="垂坠缎面，高开衩">Satin xẻ tà cao, thân rủ</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 57</span><span class="de" data-en="Draped satin, high slit" data-zh="垂坠缎面，高开衩">Satin xẻ tà cao, thân rủ</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms58/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 58</span><span class="de" data-en="Off-shoulder satin, pearl details" data-zh="一字肩缎面，珍珠点缀">Satin trễ vai, điểm ngọc nhỏ</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 58</span><span class="de" data-en="Off-shoulder satin, pearl details" data-zh="一字肩缎面，珍珠点缀">Satin trễ vai, điểm ngọc nhỏ</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hcm">
           <div class="sl-khung">
@@ -1238,11 +1263,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 110</span><span class="de" data-en="Draped satin, sheer sleeves, mermaid" data-zh="垂坠缎面，透纱袖，鱼尾">Satin rủ, tay voan, đuôi cá</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms111/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 111</span><span class="de" data-en="Off-shoulder draped satin mermaid" data-zh="一字肩垂坠缎面鱼尾婚纱">Satin trễ vai rủ eo, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 111</span><span class="de" data-en="Off-shoulder draped satin mermaid" data-zh="一字肩垂坠缎面鱼尾婚纱">Satin trễ vai rủ eo, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
@@ -1250,35 +1276,40 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 112</span><span class="de" data-en="Off-shoulder satin corset, slit" data-zh="一字肩缎面鱼骨胸衣，开衩">Corset satin trễ vai, xẻ tà</span><span class="gia">US$1,280</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms113/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 113</span><span class="de" data-en="Off-shoulder satin, fitted" data-zh="一字肩缎面，修身">Satin trễ vai, dáng ôm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 113</span><span class="de" data-en="Off-shoulder satin, fitted" data-zh="一字肩缎面，修身">Satin trễ vai, dáng ôm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms114/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 114</span><span class="de" data-en="Pleated satin, fitted" data-zh="褶皱缎面，修身">Satin xếp nếp, dáng ôm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 114</span><span class="de" data-en="Pleated satin, fitted" data-zh="褶皱缎面，修身">Satin xếp nếp, dáng ôm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms115/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 115</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Satin trễ vai, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 115</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Satin trễ vai, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms116/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 116</span><span class="de" data-en="Off-shoulder satin, slit" data-zh="一字肩缎面，开衩">Satin trễ vai, xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 116</span><span class="de" data-en="Off-shoulder satin, slit" data-zh="一字肩缎面，开衩">Satin trễ vai, xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms117/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 117</span><span class="de" data-en="Off-shoulder satin, soft mermaid" data-zh="一字肩缎面，微鱼尾">Satin trễ vai, đuôi cá mềm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 117</span><span class="de" data-en="Off-shoulder satin, soft mermaid" data-zh="一字肩缎面，微鱼尾">Satin trễ vai, đuôi cá mềm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -1310,11 +1341,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 122</span><span class="de" data-en="3D florals, grand skirt" data-zh="立体花朵，华丽大裙摆">Hoa nổi 3D, tùng xoè lớn</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms123/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 123</span><span class="de" data-en="Pleated satin mermaid" data-zh="褶皱缎面鱼尾婚纱">Satin xếp nếp, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 123</span><span class="de" data-en="Pleated satin mermaid" data-zh="褶皱缎面鱼尾婚纱">Satin xếp nếp, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -1322,11 +1354,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 124</span><span class="de" data-en="Soft lace, A-line" data-zh="柔美蕾丝，A字型">Ren hoa mềm, dáng chữ A</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms126/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 126</span><span class="de" data-en="Off-shoulder draped satin, fitted" data-zh="一字肩垂坠缎面，修身">Satin trễ vai rủ, dáng ôm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 126</span><span class="de" data-en="Off-shoulder draped satin, fitted" data-zh="一字肩垂坠缎面，修身">Satin trễ vai rủ, dáng ôm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
@@ -1345,11 +1378,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 128</span><span class="de" data-en="Long-sleeve lace, square neckline" data-zh="长袖蕾丝，方领">Ren tay dài cổ vuông</span><span class="gia">US$1,680</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms129/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 129</span><span class="de" data-en="Draped satin, soft fitted" data-zh="垂坠缎面，微修身">Satin rủ, dáng ôm mềm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 129</span><span class="de" data-en="Draped satin, soft fitted" data-zh="垂坠缎面，微修身">Satin rủ, dáng ôm mềm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -1471,17 +1505,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 152</span><span class="de" data-en="High-neck long-sleeve lace" data-zh="高领长袖蕾丝">Ren cổ cao tay dài</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms153/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 153</span><span class="de" data-en="Draped satin, sheer sleeves, fitted" data-zh="垂坠缎面，透纱袖，修身">Satin rủ tay voan, dáng ôm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 153</span><span class="de" data-en="Draped satin, sheer sleeves, fitted" data-zh="垂坠缎面，透纱袖，修身">Satin rủ tay voan, dáng ôm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms154/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 154</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Satin trễ vai, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 154</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Satin trễ vai, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-kin="1" data-dang="ballgown" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
@@ -1777,11 +1813,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 207</span><span class="de" data-en="Soft floral lace, volume" data-zh="柔美花朵蕾丝，丰盈廓形">Ren hoa mềm, tùng bồng</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms208/01.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 208</span><span class="de" data-en="Pleated satin, fitted" data-zh="褶皱缎面，修身">Satin xếp ly, dáng ôm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 208</span><span class="de" data-en="Pleated satin, fitted" data-zh="褶皱缎面，修身">Satin xếp ly, dáng ôm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
@@ -1885,11 +1922,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 230</span><span class="de" data-en="Round neck, short sleeves, satin sheath" data-zh="圆领短袖缎面直身裙">Cổ tròn, tay ngắn, satin ôm suông</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms231/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 231</span><span class="de" data-en="Strapless mermaid, tulle gloves" data-zh="抹胸鱼尾，薄纱手套">Đuôi cá cúp ngực, găng voan</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 231</span><span class="de" data-en="Strapless mermaid, tulle gloves" data-zh="抹胸鱼尾，薄纱手套">Đuôi cá cúp ngực, găng voan</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -1897,71 +1935,82 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 232</span><span class="de" data-en="Lace mermaid, high slit" data-zh="蕾丝鱼尾，高开衩">Đuôi cá ren, xẻ tà cao</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms233/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 233</span><span class="de" data-en="Strapless mermaid, tulle overskirt" data-zh="抹胸鱼尾，薄纱罩裙">Đuôi cá quây, lớp voan ngoài</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 233</span><span class="de" data-en="Strapless mermaid, tulle overskirt" data-zh="抹胸鱼尾，薄纱罩裙">Đuôi cá quây, lớp voan ngoài</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms234/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 234</span><span class="de" data-en="Asymmetric drape, side slit" data-zh="不对称垂坠，侧开衩">Xếp nếp lệch vai, xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 234</span><span class="de" data-en="Asymmetric drape, side slit" data-zh="不对称垂坠，侧开衩">Xếp nếp lệch vai, xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms235/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 235</span><span class="de" data-en="Strapless mermaid, draped bodice" data-zh="抹胸鱼尾，垂坠上身">Đuôi cá quây, xếp nếp thân</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 235</span><span class="de" data-en="Strapless mermaid, draped bodice" data-zh="抹胸鱼尾，垂坠上身">Đuôi cá quây, xếp nếp thân</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms236/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 236</span><span class="de" data-en="Draped off-shoulder mermaid" data-zh="垂坠一字肩鱼尾婚纱">Đuôi cá trễ vai xếp nếp</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 236</span><span class="de" data-en="Draped off-shoulder mermaid" data-zh="垂坠一字肩鱼尾婚纱">Đuôi cá trễ vai xếp nếp</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms238/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 238</span><span class="de" data-en="Cowl neck, clean mermaid" data-zh="垂荡领，简约鱼尾">Cổ đổ, đuôi cá trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 238</span><span class="de" data-en="Cowl neck, clean mermaid" data-zh="垂荡领，简约鱼尾">Cổ đổ, đuôi cá trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms239/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 239</span><span class="de" data-en="Crossed off-shoulder mermaid" data-zh="交叉一字肩鱼尾婚纱">Trễ vai bắt chéo, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 239</span><span class="de" data-en="Crossed off-shoulder mermaid" data-zh="交叉一字肩鱼尾婚纱">Trễ vai bắt chéo, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms240/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 240</span><span class="de" data-en="Pleated off-shoulder mermaid" data-zh="褶皱一字肩鱼尾婚纱">Trễ vai xếp ly, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 240</span><span class="de" data-en="Pleated off-shoulder mermaid" data-zh="褶皱一字肩鱼尾婚纱">Trễ vai xếp ly, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms241/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 241</span><span class="de" data-en="Wrapped off-shoulder, side slit" data-zh="包裹式一字肩，侧开衩">Trễ vai quấn chéo, xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 241</span><span class="de" data-en="Wrapped off-shoulder, side slit" data-zh="包裹式一字肩，侧开衩">Trễ vai quấn chéo, xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="romantic" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms242/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 242</span><span class="de" data-en="Halter cold-shoulder satin mermaid" data-zh="挂脖露肩缎面鱼尾">Cổ yếm, vai rủ, satin đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 242</span><span class="de" data-en="Halter cold-shoulder satin mermaid" data-zh="挂脖露肩缎面鱼尾">Cổ yếm, vai rủ, satin đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms243/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 243</span><span class="de" data-en="Pleated off-shoulder, fitted" data-zh="褶皱一字肩，修身">Trễ vai xếp ly, dáng ôm</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 243</span><span class="de" data-en="Pleated off-shoulder, fitted" data-zh="褶皱一字肩，修身">Trễ vai xếp ly, dáng ôm</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms244/01.jpg?v=logo1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 244</span><span class="de" data-en="Square neck straps, mermaid" data-zh="方领肩带，鱼尾">Cổ vuông hai dây, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 244</span><span class="de" data-en="Square neck straps, mermaid" data-zh="方领肩带，鱼尾">Cổ vuông hai dây, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -2023,17 +2072,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 254</span><span class="de" data-en="Puff long sleeves, satin A-line" data-zh="泡泡长袖，缎面A字型">Tay dài bồng vai, lụa xoè</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms255/01.jpg?v=6"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 255</span><span class="de" data-en="Statement bow off-shoulder mermaid" data-zh="大蝴蝶结一字肩鱼尾婚纱">Trễ vai nơ lớn, đuôi cá lụa</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 255</span><span class="de" data-en="Statement bow off-shoulder mermaid" data-zh="大蝴蝶结一字肩鱼尾婚纱">Trễ vai nơ lớn, đuôi cá lụa</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms256/01.jpg?v=6"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 256</span><span class="de" data-en="Wide off-shoulder satin mermaid" data-zh="宽一字肩缎面鱼尾婚纱">Trễ vai bản to, đuôi cá lụa</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 256</span><span class="de" data-en="Wide off-shoulder satin mermaid" data-zh="宽一字肩缎面鱼尾婚纱">Trễ vai bản to, đuôi cá lụa</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-kin="1" data-dang="mermaid" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
@@ -2041,11 +2092,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 257</span><span class="de" data-en="V-neck long sleeves, beaded belt mermaid" data-zh="V领长袖，钉珠腰带鱼尾婚纱">Cổ V tay dài, đai đính eo, đuôi cá</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms259/01.jpg?v=6"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 259</span><span class="de" data-en="Sweetheart satin mermaid" data-zh="心形领缎面鱼尾婚纱">Cúp ngực tim, đuôi cá lụa</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 259</span><span class="de" data-en="Sweetheart satin mermaid" data-zh="心形领缎面鱼尾婚纱">Cúp ngực tim, đuôi cá lụa</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
@@ -2065,17 +2117,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 262</span><span class="de" data-en="Sheer beaded sleeves ballgown" data-zh="钉珠透纱袖大蓬裙">Tay voan kết cườm, xoè bồng</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms263/01.jpg?v=6"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 263</span><span class="de" data-en="Straight neck satin with front slit" data-zh="平口缎面，前开衩">Cúp ngang, xẻ tà, đuôi lụa</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 263</span><span class="de" data-en="Straight neck satin with front slit" data-zh="平口缎面，前开衩">Cúp ngang, xẻ tà, đuôi lụa</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms264/01.jpg?v=6"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 264</span><span class="de" data-en="Off-shoulder plain satin mermaid" data-zh="一字肩素缎鱼尾婚纱">Trễ vai, đuôi cá lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 264</span><span class="de" data-en="Off-shoulder plain satin mermaid" data-zh="一字肩素缎鱼尾婚纱">Trễ vai, đuôi cá lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -2083,11 +2137,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 265</span><span class="de" data-en="3D floral sheer sleeves ballgown" data-zh="立体花朵透纱袖大蓬裙">Tay voan hoa nổi, xoè bồng</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms266/01.jpg?v=6"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 266</span><span class="de" data-en="Draped off-shoulder with slit" data-zh="垂坠一字肩，开衩">Trễ vai xếp nếp, xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 266</span><span class="de" data-en="Draped off-shoulder with slit" data-zh="垂坠一字肩，开衩">Trễ vai xếp nếp, xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hcm">
           <div class="sl-khung">
@@ -2203,11 +2258,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 289</span><span class="de" data-en="Fitted, plain silk, overskirt" data-zh="修身素缎，可拆卸外裙">Dáng ôm, lụa trơn, tùng rời</span><span class="gia">US$1,280</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms292/01.jpg" data-lon="anh/vay/ms292/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 292</span><span class="de" data-en="Fitted, plain silk, beaded drapes" data-zh="修身素缎，钉珠垂链">Dáng ôm, lụa trơn, dây đá vai</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 292</span><span class="de" data-en="Fitted, plain silk, beaded drapes" data-zh="修身素缎，钉珠垂链">Dáng ôm, lụa trơn, dây đá vai</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="timeless" data-coso="hn">
           <div class="sl-khung">
@@ -2221,11 +2277,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 294</span><span class="de" data-en="Ball gown, satin bodice, ruffled skirt" data-zh="大蓬裙，缎面上身，荷叶边裙摆">Dáng xoè, thân satin, chân bèo voan</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-ma-cu="560">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-ma-cu="560" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms295/01.jpg" data-lon="anh/vay/ms295/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 295</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 295</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
@@ -2257,11 +2314,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 300</span><span class="de" data-en="Ball gown, heavily beaded lace" data-zh="大蓬裙，重工钉珠蕾丝">Dáng xoè, ren đính kết dày</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms302/01.jpg" data-lon="anh/vay/ms302/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 302</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 302</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -2287,11 +2345,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 307</span><span class="de" data-en="Short dress, soft lace" data-zh="短款，柔美蕾丝">Váy ngắn, ren mềm</span><span class="gia">US$1,280</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms308/01.jpg" data-lon="anh/vay/ms308/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 308</span><span class="de" data-en="Fitted, plain silk, overskirt" data-zh="修身素缎，可拆卸外裙">Dáng ôm, lụa trơn, tùng rời</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 308</span><span class="de" data-en="Fitted, plain silk, overskirt" data-zh="修身素缎，可拆卸外裙">Dáng ôm, lụa trơn, tùng rời</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn" data-ma-cu="277">
           <div class="sl-khung">
@@ -2329,11 +2388,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 314</span><span class="de" data-en="Ball gown, plain silk" data-zh="大蓬裙，素色真丝">Dáng xoè, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms315/01.jpg" data-lon="anh/vay/ms315/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 315</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 315</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="timeless" data-coso="hn" data-ma-cu="333">
           <div class="sl-khung">
@@ -2377,11 +2437,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 325</span><span class="de" data-en="Ball gown, soft lace" data-zh="大蓬裙，柔美蕾丝">Dáng xoè, ren mềm</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms326/01.jpg" data-lon="anh/vay/ms326/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 326</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 326</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -2431,11 +2492,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 336</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms337/01.jpg" data-lon="anh/vay/ms337/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 337</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 337</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
@@ -2485,11 +2547,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 349</span><span class="de" data-en="Fitted, draped silk" data-zh="修身垂坠真丝婚纱">Dáng ôm, lụa xếp nếp</span><span class="gia">US$1,280</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms350/01.jpg" data-lon="anh/vay/ms350/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 350</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 350</span><span class="de" data-en="Fitted, plain silk" data-zh="修身，素色真丝">Dáng ôm, lụa trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn" data-ma-cu="285">
           <div class="sl-khung">
@@ -2497,11 +2560,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 352</span><span class="de" data-en="A-line, plain silk" data-zh="A字型，素色真丝">Dáng chữ A, lụa trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms353/01.jpg" data-lon="anh/vay/ms353/lon.jpg"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 353</span><span class="de" data-en="A-line, draped silk" data-zh="A字型垂坠真丝婚纱">Dáng chữ A, lụa xếp nếp</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 353</span><span class="de" data-en="A-line, draped silk" data-zh="A字型垂坠真丝婚纱">Dáng chữ A, lụa xếp nếp</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="editorial" data-coso="hn">
           <div class="sl-khung">
@@ -2695,11 +2759,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 568</span><span class="de" data-en="Beaded long-sleeve A-line" data-zh="钉珠长袖A字型婚纱">Tay dài đính kết, chữ A</span><span class="gia">US$1,480</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms569/01.jpg?v=1" data-lon="anh/vay/ms569/lon.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 569</span><span class="de" data-en="Corset sweetheart mermaid with slit" data-zh="束腰心形领开衩鱼尾婚纱">Cúp corset, đuôi cá xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 569</span><span class="de" data-en="Corset sweetheart mermaid with slit" data-zh="束腰心形领开衩鱼尾婚纱">Cúp corset, đuôi cá xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hcm">
           <div class="sl-khung">
@@ -2839,11 +2904,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 394</span><span class="de" data-en="Puff-sleeve A-line" data-zh="泡泡袖A字型婚纱">Váy suông, tay phồng ngắn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms395/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 395</span><span class="de" data-en="Cowl-neck slip mermaid" data-zh="荡领吊带鱼尾婚纱">Hai dây cổ đổ, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 395</span><span class="de" data-en="Cowl-neck slip mermaid" data-zh="荡领吊带鱼尾婚纱">Hai dây cổ đổ, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
           <div class="sl-khung">
@@ -2857,59 +2923,68 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 397</span><span class="de" data-en="Cape with draped A-line skirt" data-zh="披肩垂坠A字型婚纱">Choàng cape, thân xếp nếp</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms398/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 398</span><span class="de" data-en="Draped strapless with slit" data-zh="垂坠抹胸开衩婚纱">Cúp ngực xếp nếp, xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 398</span><span class="de" data-en="Draped strapless with slit" data-zh="垂坠抹胸开衩婚纱">Cúp ngực xếp nếp, xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms399/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 399</span><span class="de" data-en="Cowl-neck mermaid, long train" data-zh="荡领鱼尾长拖尾婚纱">Hai dây cổ đổ, đuôi dài</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 399</span><span class="de" data-en="Cowl-neck mermaid, long train" data-zh="荡领鱼尾长拖尾婚纱">Hai dây cổ đổ, đuôi dài</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms400/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 400</span><span class="de" data-en="Off-shoulder clean mermaid" data-zh="一字肩简约鱼尾婚纱">Trễ vai, đuôi cá trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 400</span><span class="de" data-en="Off-shoulder clean mermaid" data-zh="一字肩简约鱼尾婚纱">Trễ vai, đuôi cá trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms401/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 401</span><span class="de" data-en="Pearl cowl neck, draped mermaid" data-zh="珍珠荡领垂坠鱼尾婚纱">Cổ đổ ngọc trai, xếp nếp</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 401</span><span class="de" data-en="Pearl cowl neck, draped mermaid" data-zh="珍珠荡领垂坠鱼尾婚纱">Cổ đổ ngọc trai, xếp nếp</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms402/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 402</span><span class="de" data-en="Crossover off-shoulder mermaid" data-zh="交叉一字肩鱼尾婚纱">Trễ vai bắt chéo, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 402</span><span class="de" data-en="Crossover off-shoulder mermaid" data-zh="交叉一字肩鱼尾婚纱">Trễ vai bắt chéo, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms403/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 403</span><span class="de" data-en="Halter draped-shoulder mermaid" data-zh="挂脖垂坠肩鱼尾婚纱">Cổ yếm vai rủ, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 403</span><span class="de" data-en="Halter draped-shoulder mermaid" data-zh="挂脖垂坠肩鱼尾婚纱">Cổ yếm vai rủ, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="timeless" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms404/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 404</span><span class="de" data-en="Off-shoulder tulle wrap mermaid" data-zh="一字肩薄纱包裹鱼尾婚纱">Trễ vai voan, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 404</span><span class="de" data-en="Off-shoulder tulle wrap mermaid" data-zh="一字肩薄纱包裹鱼尾婚纱">Trễ vai voan, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms405/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 405</span><span class="de" data-en="Square neck mermaid" data-zh="方领鱼尾婚纱">Cổ vuông hai dây, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 405</span><span class="de" data-en="Square neck mermaid" data-zh="方领鱼尾婚纱">Cổ vuông hai dây, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="editorial" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms406/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 406</span><span class="de" data-en="Asymmetric cut-out tulle gown" data-zh="不对称镂空薄纱婚纱">Lệch vai, eo khoét, voan</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 406</span><span class="de" data-en="Asymmetric cut-out tulle gown" data-zh="不对称镂空薄纱婚纱">Lệch vai, eo khoét, voan</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-kin="1" data-dang="mermaid" data-mood="minimal" data-coso="hcm">
           <div class="sl-khung">
@@ -3211,17 +3286,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 456</span><span class="de" data-en="Sheer illusion neck, draped A-line" data-zh="透视领垂坠A字型婚纱">Cúp tim xếp nếp, lưới trên, chữ A</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms457/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 457</span><span class="de" data-en="Draped strapless satin mermaid" data-zh="垂坠抹胸缎面鱼尾婚纱">Cúp ngực xếp nếp vắt, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 457</span><span class="de" data-en="Draped strapless satin mermaid" data-zh="垂坠抹胸缎面鱼尾婚纱">Cúp ngực xếp nếp vắt, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hcm" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms458/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 458</span><span class="de" data-en="Big bow strapless satin mermaid" data-zh="大蝴蝶结抹胸缎面鱼尾婚纱">Nơ to cúp ngực, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 458</span><span class="de" data-en="Big bow strapless satin mermaid" data-zh="大蝴蝶结抹胸缎面鱼尾婚纱">Nơ to cúp ngực, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="timeless" data-coso="hcm">
           <div class="sl-khung">
@@ -3253,17 +3330,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 463</span><span class="de" data-en="Sculpted bodice satin A-line" data-zh="立体塑形上身缎面A字型婚纱">Ngực cách điệu, chữ A</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms464/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 464</span><span class="de" data-en="Off-shoulder crepe mermaid, detachable overskirt" data-zh="一字肩绉缎鱼尾，可拆卸外裙">Trễ vai crepe, đuôi cá, tùng rời</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 464</span><span class="de" data-en="Off-shoulder crepe mermaid, detachable overskirt" data-zh="一字肩绉缎鱼尾，可拆卸外裙">Trễ vai crepe, đuôi cá, tùng rời</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms465/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 465</span><span class="de" data-en="Strapless crepe column with neck scarf" data-zh="抹胸绉缎直身裙配颈巾">Cúp ngang crepe, dáng suông, khăn cổ</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 465</span><span class="de" data-en="Strapless crepe column with neck scarf" data-zh="抹胸绉缎直身裙配颈巾">Cúp ngang crepe, dáng suông, khăn cổ</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
@@ -3295,11 +3374,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 470</span><span class="de" data-en="Off-shoulder lace ballgown" data-zh="一字肩蕾丝大蓬裙">Trễ vai ren, bồng xoè nhẹ</span><span class="gia">US$880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms471/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 471</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Trễ vai, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 471</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Trễ vai, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -3319,11 +3399,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 474</span><span class="de" data-en="Off-shoulder peach tulle maternity gown, ruffle sleeves" data-zh="一字肩蜜桃色薄纱孕妇裙，荷叶袖">Trễ vai voan màu đào, váy bầu tay bèo</span><span class="gia">US$1,680</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms475/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 475</span><span class="de" data-en="Halter satin mermaid" data-zh="挂脖缎面鱼尾婚纱">Cổ yếm, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 475</span><span class="de" data-en="Halter satin mermaid" data-zh="挂脖缎面鱼尾婚纱">Cổ yếm, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mini" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
@@ -3349,17 +3430,19 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 479</span><span class="de" data-en="Satin mini dress" data-zh="缎面短款婚纱">Váy ngắn phi</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms480/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 480</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Trễ vai, đuôi cá trắng</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 480</span><span class="de" data-en="Off-shoulder satin mermaid" data-zh="一字肩缎面鱼尾婚纱">Trễ vai, đuôi cá trắng</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms481/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 481</span><span class="de" data-en="Folded off-shoulder crepe mermaid" data-zh="折叠一字肩绉缎鱼尾">Trễ vai vắt chéo, đuôi cá trơn</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 481</span><span class="de" data-en="Folded off-shoulder crepe mermaid" data-zh="折叠一字肩绉缎鱼尾">Trễ vai vắt chéo, đuôi cá trơn</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="a-line" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -3367,11 +3450,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 482</span><span class="de" data-en="Pearl illusion neck ruched satin A-line" data-zh="珍珠透视领褶皱缎面A字型">Cổ voan đính ngọc trai, chữ A phi xếp ly</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms483/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 483</span><span class="de" data-en="Strapless draped satin gown with slit" data-zh="抹胸垂坠缎面开衩婚纱">Cúp ngực xoắn, phi xếp nếp, xẻ tà</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 483</span><span class="de" data-en="Strapless draped satin gown with slit" data-zh="抹胸垂坠缎面开衩婚纱">Cúp ngực xoắn, phi xếp nếp, xẻ tà</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -3391,11 +3475,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 486</span><span class="de" data-en="Slim satin A-line" data-zh="修身缎面A字型婚纱">Chữ A ôm, phi trơn</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms487/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 487</span><span class="de" data-en="High halter cut-out satin mermaid" data-zh="高挂脖镂空缎面鱼尾婚纱">Cổ yếm cao, khoét eo, đuôi cá</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 487</span><span class="de" data-en="High halter cut-out satin mermaid" data-zh="高挂脖镂空缎面鱼尾婚纱">Cổ yếm cao, khoét eo, đuôi cá</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
@@ -3403,11 +3488,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 488</span><span class="de" data-en="Feather-flower off-shoulder mermaid" data-zh="羽毛花朵一字肩鱼尾婚纱">Trễ vai hoa lông vũ, đuôi cá</span><span class="gia">US$1,080</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms489/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 489</span><span class="de" data-en="Folded strapless mermaid, side drape" data-zh="折叠抹胸鱼尾婚纱，侧边垂坠">Quây gấp bản, tà rủ hông</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 489</span><span class="de" data-en="Folded strapless mermaid, side drape" data-zh="折叠抹胸鱼尾婚纱，侧边垂坠">Quây gấp bản, tà rủ hông</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="romantic" data-coso="hn">
           <div class="sl-khung">
@@ -3589,11 +3675,12 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
           </div>
           <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 521</span><span class="de" data-en="Sheer sleeve 3D floral ballgown" data-zh="透纱袖立体花朵大蓬裙">Tay dài voan, hoa 3D, bồng xoè</span><span class="gia">US$1,880</span></figcaption>
         </figure>
-        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn">
+        <figure data-dang="mermaid" data-mood="minimal" data-coso="hn" data-sale="1">
           <div class="sl-khung">
             <div class="sl" data-img="anh/vay/ms522/01.jpg?v=1"></div>
           </div>
-          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 522</span><span class="de" data-en="Strapless satin slit gown" data-zh="抹胸缎面开衩婚纱">Quây phi, xẻ đùi</span><span class="gia">US$880</span></figcaption>
+          <div class="ss-ghim"><span class="ss-nhan"><i data-en="Sample" data-zh="样品">Sample</i><b data-en="Sale" data-zh="特卖">Sale</b></span></div>
+          <figcaption><span class="kind" data-en="Dolinhanh Bridal" data-zh="Dolinhanh Bridal">Dolinhanh Bridal</span><span class="nm">MS 522</span><span class="de" data-en="Strapless satin slit gown" data-zh="抹胸缎面开衩婚纱">Quây phi, xẻ đùi</span><span class="gia" data-goc="US$880">US$440</span></figcaption>
         </figure>
         <figure data-dang="ballgown" data-mood="minimal" data-coso="hn">
           <div class="sl-khung">
@@ -3863,7 +3950,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <li><span class="ten" data-en="Real brides on video" data-zh="真实新娘视频">Cô dâu thật trên video</span><span class="mo" data-en="Watch our brides in their gowns on TikTok <a href=&quot;https://www.tiktok.com/@dolinhanhbridal2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>@dolinhanhbridal2019</a>." data-zh="在 TikTok <a href=&quot;https://www.tiktok.com/@dolinhanhbridal2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>@dolinhanhbridal2019</a> 观看新娘穿上 Dolinhanh 婚纱的视频。">Xem cô dâu mặc váy Dolinhanh trên TikTok <a href="https://www.tiktok.com/@dolinhanhbridal2019" target="_blank" rel="noopener">@dolinhanhbridal2019</a>.</span></li>
         <li><span class="ten" data-en="Brides' feedback" data-zh="新娘评价">Cô dâu nói gì</span><span class="mo" data-en="Read the stories of <a href=&quot;co-dau.html&quot;>brides who choose Dolinhanh</a>." data-zh="阅读<a href=&quot;co-dau.html&quot;>选择 Dolinhanh 的新娘们</a>的分享。">Đọc chia sẻ của <a href="co-dau.html">những cô dâu đã chọn Dolinhanh</a>.</span></li>
         <li><span class="ten" data-en="Video call before you pay" data-zh="付款前视频看纱">Gọi video trước khi trả tiền</span><span class="mo" data-en="See your gown live on a WhatsApp video call — the lace, the beading, the way it moves." data-zh="通过 WhatsApp 视频实时看纱——蕾丝、钉珠、裙摆的动态。">Xem váy trực tiếp qua video WhatsApp — ren, đính kết, dáng váy khi chuyển động.</span></li>
-        <li><span class="ten" data-en="Not as pictured? We exchange it" data-zh="与图片不符，可换款">Không đúng ảnh, Dolinhanh đổi váy</span><span class="mo" data-en="If the gown you receive does not match its photos and description on our website, we exchange it for another gown. We do not offer cash refunds." data-zh="如收到的婚纱与网站上的图片和描述不符，我们为你更换其他款式。恕不退款。">Váy nhận được không đúng ảnh và mô tả trên web, Dolinhanh đổi cho bạn váy khác. Không hoàn tiền.</span></li>
+        <li><span class="ten" data-en="Not as pictured? We exchange it" data-zh="与图片不符，可换款">Không đúng ảnh, Dolinhanh đổi váy</span><span class="mo" data-en="If the gown you receive does not match its photos and description on our website, we exchange it for another gown. We do not offer cash refunds. Sample sale gowns are final sale: no returns or exchanges." data-zh="如收到的婚纱与网站上的图片和描述不符，我们为你更换其他款式。恕不退款。样品特卖婚纱不退不换。">Váy nhận được không đúng ảnh và mô tả trên web, Dolinhanh đổi cho bạn váy khác. Không hoàn tiền. Váy sample sale không đổi trả.</span></li>
       </ul>
       <div class="tc-nut">
         <a class="btn" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20a%20video%20call%20to%20see%20a%20gown." target="_blank" rel="noopener" data-en="Video call on WhatsApp" data-zh="WhatsApp 视频看纱">Gọi video qua WhatsApp</a>
@@ -4033,7 +4120,7 @@ setLang(saved);
   const G=document.getElementById('vlGrid'), P=document.getElementById('vlPage'), T=document.getElementById('vlTrong');
   if(!G||!P) return;
   const F=[...G.children], PER=8;
-  let loc={dang:"",mood:"",coso:"",kin:"",gia:""}, trang=0, tatCa=false, tim="";
+  let loc={dang:"",mood:"",coso:"",kin:"",gia:"",sale:""}, trang=0, tatCa=false, tim="";
   /* tìm theo mã: số trên thẻ + số của ảnh lướt gộp vào thẻ (vd MS 32 nằm trong thẻ MS 23) */
   const K=document.getElementById('vlKhongThay'), O=document.getElementById('vlTim'), X=document.getElementById('vlTimXoa');
   F.forEach(f=>{
@@ -4052,7 +4139,8 @@ setLang(saved);
     return (!loc.dang || f.dataset.dang===loc.dang) && (!loc.mood || f.dataset.mood===loc.mood)
       && (!loc.coso || (f.dataset.coso||"hn hcm").split(" ").includes(loc.coso))
       && (!loc.kin || f.dataset.kin===loc.kin)
-      && (!loc.gia || bacGia(f)===loc.gia);
+      && (!loc.gia || bacGia(f)===loc.gia)
+      && (!loc.sale || f.dataset.sale===loc.sale);
   }
   function bacGia(f){ /* 1 <1000 · 2 1000–1399 · 3 1400–1799 · 4 ≥1800 (US$) */
     if(f._bac===undefined){ const g=+(((f.querySelector('.gia')||{}).textContent||"").replace(/[^\d]/g,""));
@@ -4122,6 +4210,7 @@ setLang(saved);
     nutLoc.setAttribute('aria-expanded', mo);
   });
 
+  if(new URLSearchParams(location.search).get('sale')){ const bs=document.querySelector('.vl-nhom button[data-loai="sale"][data-v="1"]'); if(bs) bs.click(); }
   /* link gửi khách: bo-suu-tap.html?modest=1 → mở sẵn lọc váy kín đáo, tay dài · cổ cao (14/10/2026) */
   if(new URLSearchParams(location.search).get('modest')){ const bk=document.querySelector('.vl-nhom button[data-loai="kin"][data-v="1"]'); if(bk) bk.click(); }
 
@@ -4404,4 +4493,4 @@ setLang(saved);
 </script>
 <script src="gio-hang.js?v=2"></script>
 <script src="uu-dai-500.js?v=3"></script>
-<script src="uu-dai-100.js?v=66e2ac46" defer></script>
+<script src="uu-dai-100.js?v=c1ee1d85" defer></script>

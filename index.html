@@ -10,6 +10,7 @@
 -->
 <meta charset="utf-8">
 <!-- Meta Pixel Code -->
+<script>window.VWG_SALE={"MS 57":440,"MS 58":440,"MS 111":440,"MS 113":440,"MS 114":440,"MS 115":440,"MS 116":440,"MS 117":440,"MS 123":440,"MS 126":440,"MS 129":440,"MS 153":440,"MS 154":440,"MS 208":440,"MS 231":440,"MS 233":440,"MS 234":440,"MS 235":440,"MS 236":440,"MS 238":440,"MS 239":440,"MS 240":440,"MS 241":440,"MS 242":440,"MS 243":440,"MS 244":440,"MS 255":440,"MS 256":440,"MS 259":440,"MS 263":440,"MS 264":440,"MS 266":440,"MS 292":440,"MS 295":440,"MS 302":440,"MS 308":440,"MS 315":440,"MS 326":440,"MS 337":440,"MS 350":440,"MS 353":440,"MS 569":440,"MS 395":440,"MS 398":440,"MS 399":440,"MS 400":440,"MS 401":440,"MS 402":440,"MS 403":440,"MS 404":440,"MS 405":440,"MS 406":440,"MS 457":440,"MS 458":440,"MS 464":440,"MS 465":440,"MS 471":440,"MS 475":440,"MS 480":440,"MS 481":440,"MS 483":440,"MS 487":440,"MS 489":440,"MS 522":440};try{var g=JSON.parse(localStorage.getItem("dla-gio")||"[]"),d=0;g.forEach(function(x){var v=x&&VWG_SALE[(x.ms||"").toUpperCase()];if(v&&x.gia!=="US$"+v){x.gia="US$"+v;d=1}});if(d)localStorage.setItem("dla-gio",JSON.stringify(g))}catch(_){}</script>
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -675,6 +676,22 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
   @media (max-width:560px){.xa-bon{grid-template-columns:1fr}}
   @media (max-width:560px){header nav .nav-voan{display:none}}
   #quatang,.pop-qua-xong,.hero-qua,p.pop-qua{display:none!important}
+
+  html.vwg .vl figure[data-sale]{position:relative}
+  .ss-nhan{display:none}
+  .ss-ghim{position:relative;height:0}  /* ghim tag vào đáy ảnh, ngay trên figcaption */
+  html.vwg .ss-nhan{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;position:absolute;left:6px;bottom:6px;z-index:3;width:54px;height:70px;padding-bottom:13px;box-sizing:border-box;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 130'%3E%3Ccircle cx='50' cy='88' r='38' fill='%23FBF7EF' stroke='%238B0F24' stroke-width='1.2'/%3E%3Ccircle cx='50' cy='60' r='5.4' fill='%23C9C2B5'/%3E%3Ccircle cx='50' cy='60' r='2.9' fill='%233a3430' fill-opacity='.55'/%3E%3Cpath d='M50 60 C54 44,76 46,72 30 C69 18,54 20,58 8' fill='none' stroke='%238B0F24' stroke-width='1.8' stroke-linecap='round'/%3E%3Cpath d='M50 60 C45 46,68 40,65 26' fill='none' stroke='%238B0F24' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(1px 2px 2px rgba(0,0,0,.28));color:#8B0F24;text-align:center;line-height:1.05;pointer-events:none}
+  html.vwg .ss-nhan i{font-family:var(--serif);font-style:italic;font-size:9.5px}
+  html.vwg .ss-nhan b{margin-top:1px;font-family:var(--sans);font-weight:600;font-size:4.8px;letter-spacing:.2em;text-transform:uppercase}
+  @media (max-width:760px){ html.vwg .ss-nhan{left:4px;bottom:4px;width:46px;height:60px;padding-bottom:11px} html.vwg .ss-nhan i{font-size:8px} html.vwg .ss-nhan b{font-size:4.2px} }
+  html.co-gia.vwg .vl .gia[data-goc]{color:#6F2A3A}
+  html.co-gia.vwg .vl .gia[data-goc]::after{content:attr(data-goc);margin-left:7px;color:var(--taupe-deep,#6E665C);font-size:.8em;text-decoration:line-through;text-decoration-thickness:1px;opacity:.75}
+  .ss-bang{display:block;padding:clamp(30px,5vw,48px) var(--gutter,20px);background:#F6F2EC;border-block:1px solid rgba(110,102,92,.22);color:#1B1917!important;text-align:center;text-decoration:none}
+  .ss-bang .k{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#6E665C}
+  .ss-bang .t{display:block;margin-top:10px;font-family:var(--serif);font-weight:400;font-size:clamp(1.55rem,3.6vw,2.3rem);line-height:1.2}
+  .ss-bang .t em{font-style:italic;color:#6F2A3A}
+  .ss-bang .p{display:block;margin-top:10px;font-family:var(--sans);font-size:13px;line-height:1.6;color:#6E665C}
+  .ss-bang .n{display:inline-block;margin-top:16px;padding-bottom:3px;border-bottom:1px solid #1B1917;font-family:var(--sans);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase}
 </style>
 <style>
 /* Ảnh bìa riêng cho điện thoại: khung dọc 1600×2400, không phóng ảnh ngang lên 2,5 lần nữa */
@@ -727,6 +744,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
     </div>
   </section>
 
+<a class="ss-bang" href="bo-suu-tap.html?sale=1"><span class="k" data-en="Sample sale" data-zh="样品特卖">Sample sale</span><span class="t"><em data-en="50% off" data-zh="五折">Giảm 50%</em> <span data-en="sample gowns" data-zh="样品婚纱">váy hàng mẫu</span></span><span class="p" data-en="One piece each, until sold out · Final sale, no returns or exchanges" data-zh="每款仅 1 件，售完即止 · 不退不换">Mỗi mẫu 1 chiếc, bán đến hết · Không đổi trả</span><span class="n" data-en="See the gowns" data-zh="查看婚纱">Xem váy</span></a>
   <!-- ══ 01b · CÔ DÂU Ở NƯỚC NGOÀI — CHỈ hiện cho khách vào từ vietnamweddinggown.com (BA_NGU, 14/10/2026). Khách web chính không thấy. ══ -->
   <section class="air" id="xa" hidden>
     <div class="wrap">
@@ -774,7 +792,7 @@ src="https://www.facebook.com/tr?id=1358640082651240&ev=PageView&noscript=1"
         <li><span class="ten" data-en="Real brides on video" data-zh="真实新娘视频">Cô dâu thật trên video</span><span class="mo" data-en="Watch our brides in their gowns on TikTok <a href=&quot;https://www.tiktok.com/@dolinhanhbridal2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>@dolinhanhbridal2019</a>." data-zh="在 TikTok <a href=&quot;https://www.tiktok.com/@dolinhanhbridal2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>@dolinhanhbridal2019</a> 观看新娘穿上 Dolinhanh 婚纱的视频。">Xem cô dâu mặc váy Dolinhanh trên TikTok <a href="https://www.tiktok.com/@dolinhanhbridal2019" target="_blank" rel="noopener">@dolinhanhbridal2019</a>.</span></li>
         <li><span class="ten" data-en="Brides' feedback" data-zh="新娘评价">Cô dâu nói gì</span><span class="mo" data-en="Read the stories of <a href=&quot;co-dau.html&quot;>brides who choose Dolinhanh</a>." data-zh="阅读<a href=&quot;co-dau.html&quot;>选择 Dolinhanh 的新娘们</a>的分享。">Đọc chia sẻ của <a href="co-dau.html">những cô dâu đã chọn Dolinhanh</a>.</span></li>
         <li><span class="ten" data-en="Video call before you pay" data-zh="付款前视频看纱">Gọi video trước khi trả tiền</span><span class="mo" data-en="See your gown live on a WhatsApp video call — the lace, the beading, the way it moves." data-zh="通过 WhatsApp 视频实时看纱——蕾丝、钉珠、裙摆的动态。">Xem váy trực tiếp qua video WhatsApp — ren, đính kết, dáng váy khi chuyển động.</span></li>
-        <li><span class="ten" data-en="Not as pictured? We exchange it" data-zh="与图片不符，可换款">Không đúng ảnh, Dolinhanh đổi váy</span><span class="mo" data-en="If the gown you receive does not match its photos and description on our website, we exchange it for another gown. We do not offer cash refunds." data-zh="如收到的婚纱与网站上的图片和描述不符，我们为你更换其他款式。恕不退款。">Váy nhận được không đúng ảnh và mô tả trên web, Dolinhanh đổi cho bạn váy khác. Không hoàn tiền.</span></li>
+        <li><span class="ten" data-en="Not as pictured? We exchange it" data-zh="与图片不符，可换款">Không đúng ảnh, Dolinhanh đổi váy</span><span class="mo" data-en="If the gown you receive does not match its photos and description on our website, we exchange it for another gown. We do not offer cash refunds. Sample sale gowns are final sale: no returns or exchanges." data-zh="如收到的婚纱与网站上的图片和描述不符，我们为你更换其他款式。恕不退款。样品特卖婚纱不退不换。">Váy nhận được không đúng ảnh và mô tả trên web, Dolinhanh đổi cho bạn váy khác. Không hoàn tiền. Váy sample sale không đổi trả.</span></li>
       </ul>
       <div class="tc-nut">
         <a class="btn" href="https://wa.me/84359950588?text=Hi%20Dolinhanh%20Bridal%2C%20I%27d%20like%20a%20video%20call%20to%20see%20a%20gown." target="_blank" rel="noopener" data-en="Video call on WhatsApp" data-zh="WhatsApp 视频看纱">Gọi video qua WhatsApp</a>
@@ -1259,4 +1277,4 @@ setLang(saved);
 </script>
 <script src="gio-hang.js?v=2"></script>
 <script src="uu-dai-500.js?v=3"></script>
-<script src="uu-dai-100.js?v=66e2ac46" defer></script>
+<script src="uu-dai-100.js?v=c1ee1d85" defer></script>
