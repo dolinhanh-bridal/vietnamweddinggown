@@ -1,0 +1,3 @@
+# Chỉ để GitHub Pages bỏ thư mục tạm khỏi trang (giới hạn 1GB). File trong tmp-etsy vẫn ở repo (raw.githubusercontent dùng cho Etsy).
+exclude:
+  - tmp-etsy
